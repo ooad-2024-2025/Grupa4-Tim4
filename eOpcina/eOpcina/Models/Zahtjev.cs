@@ -10,10 +10,8 @@ namespace eOpcina.Models
         public DateTime DatumSlanja { get; set; }
         [ForeignKey("Korisnik")]
         public string IdKorisnika { get; set; }
-        public Korisnik Korisnik { get; set; }
         [ForeignKey("Dokument")]
         public int IdDokumenta { get; set; }
-        public Dokument Dokument { get; set; }
         public Razlog RazlogZahtjeva { get; set; }
 
         public Zahtjev() { }

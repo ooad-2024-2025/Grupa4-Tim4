@@ -1,0 +1,49 @@
+﻿@model eOpcina.Models.Zahtjev
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Zahtjev</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="DatumSlanja" class="control-label"></label>
+                <input asp-for="DatumSlanja" class="form-control" />
+                <span asp-validation-for="DatumSlanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdKorisnika" class="control-label"></label>
+                <input asp-for="IdKorisnika" class="form-control" />
+                <span asp-validation-for="IdKorisnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdDokumenta" class="control-label"></label>
+                <input asp-for="IdDokumenta" class="form-control" />
+                <span asp-validation-for="IdDokumenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RazlogZahtjeva" class="control-label"></label>
+                <select asp-for="RazlogZahtjeva" class="form-control"></select>
+                <span asp-validation-for="RazlogZahtjeva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
