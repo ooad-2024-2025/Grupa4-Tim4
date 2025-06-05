@@ -1,5 +1,15 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\eopcina_logo_bw.png
+wwwroot\images\eopcina-logo-bw.jpg
+wwwroot\images\icons8-clock.svg
+wwwroot\images\icons8-document.svg
+wwwroot\images\icons8-shield-64.png
+wwwroot\images\iddeea-logo.png
+wwwroot\images\opcina.jpg
+wwwroot\images\opcina1.jpg
+wwwroot\images\opcina2.jpg
+wwwroot\images\opcina3.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

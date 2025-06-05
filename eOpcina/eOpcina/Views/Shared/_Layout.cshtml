@@ -8,43 +8,105 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/eOpcina.styles.css" asp-append-version="true" />
 </head>
+
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">eOpcina</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+    <div class="d-flex flex-column min-vh-100">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light ms-4" asp-area="" asp-controller="Home" asp-action="Index">eOpcina</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Početna</a>
+                            </li>
+                         
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Zahtjev" asp-action="Index">Pošalji zahtjev</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Administracija
+                                </a>
+                                <ul class="dropdown-menu admin-menu" aria-labelledby="adminDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Dodaj korisnika</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Uredi korisnika</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Uredi šablone</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Historija zahtjeva</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Profil</a>
+                            </li>
+                        </ul>
+
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main" class="flex-grow-1">
+            <div class="container py-4">
+                @RenderBody()   
+            </div>
+        </main>
+
+
+        <footer class="footer-custom mt-4">
+            <div class="container-fluid py-4 text-white">
+                <div class="row">
+                    <div class="col-md-3 ms-3">
+                        <h5 class="mb-3 text-white">Navigacija</h5>
+                        <ul class="list-unstyled">
+                            <li><a style="color: #9DB2BF; text-decoration: none;" href="#">Profil</a></li>
+                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Zahtjev" asp-action="Index">Pošalji zahtjev</a></li>
+                            <li><a style="color: #9DB2BF; text-decoration: none;" href="#">Historija zahtjeva</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5 class="mb-3 text-white">Općenito</h5>
+                        <ul class="list-unstyled">
+                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Register">Početna</a></li>
+                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Register">Registracija</a></li>
+                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Privacy">Privatnost</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h5 class="mb-3 text-white">Kontakt</h5>
+                        <ul class="list-unstyled" style="color: #9DB2BF; text-decoration: none;">
+                            <li>Adresa: Ulica Bosne 12, Sarajevo</li>
+                            <li>Telefon: +387 33 123 456</li>
+                            <li>Radno vrijeme: Pon - Pet, 08:00 - 16:00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-end mt-0 pe-0" style="color: #9DB2BF;">
+                    &copy; 2025 - eOpcina
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        </footer>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - eOpcina - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H58Yiqi+J2xyUc3W1NC01vexBzrKLhSHeO8ZPLPyzRs=",
+  "Hash": "dysCy0nXMvrfGvASSfcE98T8pd+MMR4OOFl+1RAEFSs=",
   "Source": "eOpcina",
   "BasePath": "_content/eOpcina",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "bpe2llm6m8",
+      "Integrity": "EcB9ayZu7YKiKsm9Tp2t7rLoY5drQNRoWoJXU3XD5bo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,216 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina_logo_bw.png",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/eopcina_logo_bw#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dogdoxp2v1",
+      "Integrity": "reGXhD2pi4Q9jBgFDSHense1N3+edpNjIY3D2xM3vUU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\eopcina_logo_bw.png"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina-logo-bw.jpg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/eopcina-logo-bw#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eyj6o3xvy7",
+      "Integrity": "eoFr5qTqVSStYIRQT37xUEckmHlXNdyW9Hi/xAqEBfo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\eopcina-logo-bw.jpg"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-clock.svg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/icons8-clock#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b0ehhrktb7",
+      "Integrity": "K94gP8vbwxRSkVqfJww8WQGXX/Cc9sFOUaNxOvk8/SA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons8-clock.svg"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-document.svg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/icons8-document#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "19iczmqo5f",
+      "Integrity": "ZaKS+zFdjYhQAwFDcDsqjxsyeP/KV/nOmH+vuFwp0Wk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons8-document.svg"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-shield-64.png",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/icons8-shield-64#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x8fwndhz04",
+      "Integrity": "MbChgh2aPVRcXYisuP5ia+mfU/lLDqFdY3JMJo7MqRg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons8-shield-64.png"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\iddeea-logo.png",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/iddeea-logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mqx40spgu5",
+      "Integrity": "MvwTuMnE2KWIYkG5H4H+bU8mu9ijG0COdluRfauVKw0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\iddeea-logo.png"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina.jpg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/opcina#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "toix5jaiyp",
+      "Integrity": "I7IwxKDPKIi12azPuxpFkM22SrC1sACV6Gs/xbHulyg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\opcina.jpg"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina1.jpg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/opcina1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s9tv2jh2xi",
+      "Integrity": "EFyG/8Ikm0qpLmYZTm2qD0ZP9kodO53iqjM9uMgyndM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\opcina1.jpg"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina2.jpg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/opcina2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b3v7hrlqn0",
+      "Integrity": "2ZkxWrtPYQfgJhLqG3Ue0j1cYmyWMaQbrhVLe7EbSy8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\opcina2.jpg"
+    },
+    {
+      "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina3.jpg",
+      "SourceId": "eOpcina",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\",
+      "BasePath": "_content/eOpcina",
+      "RelativePath": "images/opcina3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xdl3472n0c",
+      "Integrity": "BW/JybHgdWdGU48IxCYrNqVvJAQFzP8EtNmhrcXEwWg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\opcina3.jpg"
     },
     {
       "Identity": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\js\\site.js",
@@ -136,8 +346,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ozu22stjof",
-      "Integrity": "ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=",
+      "Fingerprint": "483johbm17",
+      "Integrity": "7DzKT+4h+HrnfvW2nfWnt9fmvqYDI0waFpoLYTbMPkA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -178,8 +388,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "Fingerprint": "a5jisg8k36",
+      "Integrity": "knIKeh8k+D6My7ROryoj7kmDT9msDAoQsgeVvPkbjAQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -2581,7 +2791,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
+      "Route": "css/site.bpe2llm6m8.css",
       "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2591,7 +2801,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "1972"
         },
         {
           "Name": "Content-Type",
@@ -2599,11 +2809,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"EcB9ayZu7YKiKsm9Tp2t7rLoY5drQNRoWoJXU3XD5bo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:04:43 GMT"
+          "Value": "Thu, 05 Jun 2025 09:27:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2613,7 +2823,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "bpe2llm6m8"
         },
         {
           "Name": "label",
@@ -2621,7 +2831,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-EcB9ayZu7YKiKsm9Tp2t7rLoY5drQNRoWoJXU3XD5bo="
         }
       ]
     },
@@ -2636,7 +2846,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "1972"
         },
         {
           "Name": "Content-Type",
@@ -2644,11 +2854,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"EcB9ayZu7YKiKsm9Tp2t7rLoY5drQNRoWoJXU3XD5bo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:04:43 GMT"
+          "Value": "Thu, 05 Jun 2025 09:27:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2658,7 +2868,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-EcB9ayZu7YKiKsm9Tp2t7rLoY5drQNRoWoJXU3XD5bo="
         }
       ]
     },
@@ -5129,6 +5339,826 @@
       ]
     },
     {
+      "Route": "images/eopcina_logo_bw.dogdoxp2v1.png",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina_logo_bw.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37074"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"reGXhD2pi4Q9jBgFDSHense1N3+edpNjIY3D2xM3vUU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 23:01:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dogdoxp2v1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/eopcina_logo_bw.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-reGXhD2pi4Q9jBgFDSHense1N3+edpNjIY3D2xM3vUU="
+        }
+      ]
+    },
+    {
+      "Route": "images/eopcina_logo_bw.png",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina_logo_bw.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37074"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"reGXhD2pi4Q9jBgFDSHense1N3+edpNjIY3D2xM3vUU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 23:01:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-reGXhD2pi4Q9jBgFDSHense1N3+edpNjIY3D2xM3vUU="
+        }
+      ]
+    },
+    {
+      "Route": "images/eopcina-logo-bw.eyj6o3xvy7.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina-logo-bw.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eoFr5qTqVSStYIRQT37xUEckmHlXNdyW9Hi/xAqEBfo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 13:49:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eyj6o3xvy7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/eopcina-logo-bw.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eoFr5qTqVSStYIRQT37xUEckmHlXNdyW9Hi/xAqEBfo="
+        }
+      ]
+    },
+    {
+      "Route": "images/eopcina-logo-bw.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina-logo-bw.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31151"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eoFr5qTqVSStYIRQT37xUEckmHlXNdyW9Hi/xAqEBfo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 13:49:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eoFr5qTqVSStYIRQT37xUEckmHlXNdyW9Hi/xAqEBfo="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-clock.b0ehhrktb7.svg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-clock.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K94gP8vbwxRSkVqfJww8WQGXX/Cc9sFOUaNxOvk8/SA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 22:33:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b0ehhrktb7"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-clock.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K94gP8vbwxRSkVqfJww8WQGXX/Cc9sFOUaNxOvk8/SA="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-clock.svg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-clock.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K94gP8vbwxRSkVqfJww8WQGXX/Cc9sFOUaNxOvk8/SA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 22:33:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K94gP8vbwxRSkVqfJww8WQGXX/Cc9sFOUaNxOvk8/SA="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-document.19iczmqo5f.svg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-document.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZaKS+zFdjYhQAwFDcDsqjxsyeP/KV/nOmH+vuFwp0Wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 22:32:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "19iczmqo5f"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-document.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZaKS+zFdjYhQAwFDcDsqjxsyeP/KV/nOmH+vuFwp0Wk="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-document.svg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-document.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZaKS+zFdjYhQAwFDcDsqjxsyeP/KV/nOmH+vuFwp0Wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 22:32:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZaKS+zFdjYhQAwFDcDsqjxsyeP/KV/nOmH+vuFwp0Wk="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-shield-64.png",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-shield-64.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MbChgh2aPVRcXYisuP5ia+mfU/lLDqFdY3JMJo7MqRg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 22:33:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MbChgh2aPVRcXYisuP5ia+mfU/lLDqFdY3JMJo7MqRg="
+        }
+      ]
+    },
+    {
+      "Route": "images/icons8-shield-64.x8fwndhz04.png",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-shield-64.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1171"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MbChgh2aPVRcXYisuP5ia+mfU/lLDqFdY3JMJo7MqRg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 22:33:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x8fwndhz04"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icons8-shield-64.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MbChgh2aPVRcXYisuP5ia+mfU/lLDqFdY3JMJo7MqRg="
+        }
+      ]
+    },
+    {
+      "Route": "images/iddeea-logo.mqx40spgu5.png",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\iddeea-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "88599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MvwTuMnE2KWIYkG5H4H+bU8mu9ijG0COdluRfauVKw0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:15:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mqx40spgu5"
+        },
+        {
+          "Name": "label",
+          "Value": "images/iddeea-logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MvwTuMnE2KWIYkG5H4H+bU8mu9ijG0COdluRfauVKw0="
+        }
+      ]
+    },
+    {
+      "Route": "images/iddeea-logo.png",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\iddeea-logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "88599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MvwTuMnE2KWIYkG5H4H+bU8mu9ijG0COdluRfauVKw0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:15:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MvwTuMnE2KWIYkG5H4H+bU8mu9ijG0COdluRfauVKw0="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111053"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I7IwxKDPKIi12azPuxpFkM22SrC1sACV6Gs/xbHulyg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:53:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I7IwxKDPKIi12azPuxpFkM22SrC1sACV6Gs/xbHulyg="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina.toix5jaiyp.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111053"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I7IwxKDPKIi12azPuxpFkM22SrC1sACV6Gs/xbHulyg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:53:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "toix5jaiyp"
+        },
+        {
+          "Name": "label",
+          "Value": "images/opcina.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I7IwxKDPKIi12azPuxpFkM22SrC1sACV6Gs/xbHulyg="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina1.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "493514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EFyG/8Ikm0qpLmYZTm2qD0ZP9kodO53iqjM9uMgyndM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:40:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EFyG/8Ikm0qpLmYZTm2qD0ZP9kodO53iqjM9uMgyndM="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina1.s9tv2jh2xi.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "493514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EFyG/8Ikm0qpLmYZTm2qD0ZP9kodO53iqjM9uMgyndM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:40:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s9tv2jh2xi"
+        },
+        {
+          "Name": "label",
+          "Value": "images/opcina1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EFyG/8Ikm0qpLmYZTm2qD0ZP9kodO53iqjM9uMgyndM="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina2.b3v7hrlqn0.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ZkxWrtPYQfgJhLqG3Ue0j1cYmyWMaQbrhVLe7EbSy8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:49:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b3v7hrlqn0"
+        },
+        {
+          "Name": "label",
+          "Value": "images/opcina2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ZkxWrtPYQfgJhLqG3Ue0j1cYmyWMaQbrhVLe7EbSy8="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina2.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "281609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ZkxWrtPYQfgJhLqG3Ue0j1cYmyWMaQbrhVLe7EbSy8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 08:49:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ZkxWrtPYQfgJhLqG3Ue0j1cYmyWMaQbrhVLe7EbSy8="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina3.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125235"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BW/JybHgdWdGU48IxCYrNqVvJAQFzP8EtNmhrcXEwWg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 09:06:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BW/JybHgdWdGU48IxCYrNqVvJAQFzP8EtNmhrcXEwWg="
+        }
+      ]
+    },
+    {
+      "Route": "images/opcina3.xdl3472n0c.jpg",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "125235"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BW/JybHgdWdGU48IxCYrNqVvJAQFzP8EtNmhrcXEwWg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 09:06:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xdl3472n0c"
+        },
+        {
+          "Name": "label",
+          "Value": "images/opcina3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BW/JybHgdWdGU48IxCYrNqVvJAQFzP8EtNmhrcXEwWg="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -5211,6 +6241,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap.483johbm17.css",
+      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "286698"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7DzKT+4h+HrnfvW2nfWnt9fmvqYDI0waFpoLYTbMPkA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 21:36:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "483johbm17"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7DzKT+4h+HrnfvW2nfWnt9fmvqYDI0waFpoLYTbMPkA="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
@@ -5221,7 +6296,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "215356"
+          "Value": "286698"
         },
         {
           "Name": "Content-Type",
@@ -5229,11 +6304,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=\""
+          "Value": "\"7DzKT+4h+HrnfvW2nfWnt9fmvqYDI0waFpoLYTbMPkA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:04:43 GMT"
+          "Value": "Tue, 03 Jun 2025 21:36:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5243,7 +6318,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA="
+          "Value": "sha256-7DzKT+4h+HrnfvW2nfWnt9fmvqYDI0waFpoLYTbMPkA="
         }
       ]
     },
@@ -5330,7 +6405,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.a5jisg8k36.css",
       "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5340,7 +6415,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "227017"
         },
         {
           "Name": "Content-Type",
@@ -5348,11 +6423,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"knIKeh8k+D6My7ROryoj7kmDT9msDAoQsgeVvPkbjAQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:04:43 GMT"
+          "Value": "Tue, 03 Jun 2025 21:36:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5362,7 +6437,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
+          "Value": "a5jisg8k36"
         },
         {
           "Name": "label",
@@ -5370,7 +6445,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-knIKeh8k+D6My7ROryoj7kmDT9msDAoQsgeVvPkbjAQ="
         }
       ]
     },
@@ -5385,7 +6460,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "227017"
         },
         {
           "Name": "Content-Type",
@@ -5393,11 +6468,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"knIKeh8k+D6My7ROryoj7kmDT9msDAoQsgeVvPkbjAQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:04:43 GMT"
+          "Value": "Tue, 03 Jun 2025 21:36:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5407,7 +6482,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-knIKeh8k+D6My7ROryoj7kmDT9msDAoQsgeVvPkbjAQ="
         }
       ]
     },
@@ -5490,51 +6565,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "215356"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 15:04:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ozu22stjof"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA="
         }
       ]
     },

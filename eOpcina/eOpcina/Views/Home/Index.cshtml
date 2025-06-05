@@ -2,7 +2,43 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container my-5">
+    <!-- Top section with welcome message and image -->
+    <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+            <h1>Dobrodošli na eOpcina</h1>
+            <p>Vaš besplatni online servis za brzo dobavljanje i preuzimanje dokumenata.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="~/images/eopcina_logo_bw.png" class="img-fluid welcome-img" style="max-width: 60%; height: auto;" alt="Welcome Image">
+        </div>
+    </div>
+
+    <!-- Card section -->
+    <div class="d-grid" style="grid-template-columns: repeat(3, 1fr); gap: 3rem;">
+        <div class="card bg-light p-4 d-flex flex-row align-items-start" style="min-height: 230px;">
+            <img src="~/images/icons8-document.svg" class="me-4" alt="Icon 1" width="60" height="60">
+            <div>
+                <h4 class="card-title mb-2">Zahtjevi za dokumente</h4>
+                <p class="card-text">Podnesite, pratite i preuzmite razne zvanične dokumente poput izvoda iz matične knjige rođenih, vjenčanih listova, dozvola i slično.</p>
+            </div>
+        </div>
+
+        <div class="card bg-light p-4 d-flex flex-row align-items-start" style="min-height: 230px;">
+            <img src="~/images/icons8-shield-64.png" class="me-4" alt="Icon 2" width="60" height="60">
+            <div>
+                <h4 class="card-title mb-2">Sigurnost</h4>
+                <p class="card-text">Vaše privatne informacije su sačuvane korištenjem protokola koji garantuju visoku sigurnost.</p>
+            </div>
+        </div>
+
+        <div class="card bg-light p-4 d-flex flex-row align-items-start" style="min-height: 230px;">
+            <img src="~/images/icons8-clock.svg" class="me-4" alt="Icon 3" width="60" height="60">
+            <div>
+                <h4 class="card-title mb-2">Brza obrada</h4>
+                <p class="card-text">Uživajte u brzoj obradi zahtjeva i preuzmite svoje dokumente bez ikakvih komplikacija.</p>
+            </div>
+        </div>
+    </div>
+
 </div>

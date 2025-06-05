@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eOpcina")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+658daddd67da9313844d12c456022fcf156e1493")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d54e4b71ee0f6bb309cc4e10cccf6ae458efafa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("eOpcina")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eOpcina")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

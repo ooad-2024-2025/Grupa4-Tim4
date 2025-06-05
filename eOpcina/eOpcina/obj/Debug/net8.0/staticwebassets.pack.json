@@ -13,6 +13,46 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina-logo-bw.jpg",
+      "PackagePath": "staticwebassets\\images\\eopcina-logo-bw.jpg"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina_logo_bw.png",
+      "PackagePath": "staticwebassets\\images\\eopcina_logo_bw.png"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-clock.svg",
+      "PackagePath": "staticwebassets\\images\\icons8-clock.svg"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-document.svg",
+      "PackagePath": "staticwebassets\\images\\icons8-document.svg"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-shield-64.png",
+      "PackagePath": "staticwebassets\\images\\icons8-shield-64.png"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\iddeea-logo.png",
+      "PackagePath": "staticwebassets\\images\\iddeea-logo.png"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina.jpg",
+      "PackagePath": "staticwebassets\\images\\opcina.jpg"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina1.jpg",
+      "PackagePath": "staticwebassets\\images\\opcina1.jpg"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina2.jpg",
+      "PackagePath": "staticwebassets\\images\\opcina2.jpg"
+    },
+    {
+      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina3.jpg",
+      "PackagePath": "staticwebassets\\images\\opcina3.jpg"
+    },
+    {
       "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
