@@ -46,7 +46,6 @@ namespace eOpcina.Controllers
         // GET: Sablon/Create
         public IActionResult Create()
         {
-            ViewData["TipDokumenta"] = new SelectList(Enum.GetValues(typeof(TipDokumenta)).Cast<TipDokumenta>());
             return View();
         }
 
@@ -55,7 +54,7 @@ namespace eOpcina.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TipDokumenta")] Sablon sablon)
+        public async Task<IActionResult> Create([Bind("Id,TipDokumenta,PDFSablona")] Sablon sablon)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace eOpcina.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TipDokumenta")] Sablon sablon)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TipDokumenta,PDFSablona")] Sablon sablon)
         {
             if (id != sablon.Id)
             {

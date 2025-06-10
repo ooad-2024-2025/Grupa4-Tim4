@@ -22,7 +22,8 @@ namespace eOpcina.Controllers
         // GET: Zahtjev
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Zahtjev.ToListAsync());
+            var applicationDbContext = _context.Zahtjev.Include(z => z.Dokument).Include(z => z.Korisnik);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Zahtjev/Details/5
@@ -34,6 +35,8 @@ namespace eOpcina.Controllers
             }
 
             var zahtjev = await _context.Zahtjev
+                .Include(z => z.Dokument)
+                .Include(z => z.Korisnik)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (zahtjev == null)
             {
@@ -46,34 +49,28 @@ namespace eOpcina.Controllers
         // GET: Zahtjev/Create
         public IActionResult Create()
         {
-            ViewData["IdKorisnika"] = new SelectList(_context.Users, "Id", "Ime");
             ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id");
-            ViewData["RazlogZahtjeva"] = new SelectList(Enum.GetValues(typeof(Razlog)).Cast<Razlog>());
-
+            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id");
             return View();
         }
 
         // POST: Zahtjev/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdKorisnika,IdDokumenta,RazlogZahtjeva")] Zahtjev zahtjev)
+        public async Task<IActionResult> Create([Bind("Id,DatumSlanja,IdKorisnika,IdDokumenta,RazlogZahtjeva")] Zahtjev zahtjev)
         {
             if (ModelState.IsValid)
             {
-                zahtjev.DatumSlanja = DateTime.Now;
                 _context.Add(zahtjev);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-            // If invalid, repopulate dropdowns
-            ViewData["IdKorisnika"] = new SelectList(_context.Users, "Id", "Ime", zahtjev.IdKorisnika);
             ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id", zahtjev.IdDokumenta);
-            ViewData["RazlogZahtjeva"] = new SelectList(Enum.GetValues(typeof(Razlog)).Cast<Razlog>());
-
+            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
             return View(zahtjev);
         }
-
 
         // GET: Zahtjev/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -88,6 +85,8 @@ namespace eOpcina.Controllers
             {
                 return NotFound();
             }
+            ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id", zahtjev.IdDokumenta);
+            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
             return View(zahtjev);
         }
 
@@ -123,6 +122,8 @@ namespace eOpcina.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id", zahtjev.IdDokumenta);
+            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
             return View(zahtjev);
         }
 
@@ -135,6 +136,8 @@ namespace eOpcina.Controllers
             }
 
             var zahtjev = await _context.Zahtjev
+                .Include(z => z.Dokument)
+                .Include(z => z.Korisnik)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (zahtjev == null)
             {

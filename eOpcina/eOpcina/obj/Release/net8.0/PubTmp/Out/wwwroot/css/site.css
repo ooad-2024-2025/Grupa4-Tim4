@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.footer-custom {
+    height: auto;
+    background-color: #222831;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+
+.navbar {
+    background-color: #222831;
+}
+
+.welcome-img {
+    max-width: 100%;
+    width: 35vw; 
+    height: auto;
+}
+
+
+.slideshow-container {
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slideshow {
+    display: flex;
+    width: calc(600px * 5); /* 5 because of the duplicated first */
+    transition: transform 1s ease-in-out;
+}
+
+.slideshow img {
+    width: 600px;
+    height: 500px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+/* Each slide lasts 4s total, with ~1s smooth scroll */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-600px);
+    }
+
+    45% {
+        transform: translateX(-600px);
+    }
+
+    50% {
+        transform: translateX(-1200px);
+    }
+
+    70% {
+        transform: translateX(-1200px);
+    }
+
+    75% {
+        transform: translateX(-1800px);
+    }
+
+    95% {
+        transform: translateX(-1800px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
