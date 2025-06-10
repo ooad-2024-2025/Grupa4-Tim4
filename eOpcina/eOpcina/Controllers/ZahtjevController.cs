@@ -7,6 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using eOpcina.Data;
 using eOpcina.Models;
+using System.Net.Mail;
+using System.Net;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
+using iText.Kernel.Pdf;
+using iText.Forms;
+using iText.Forms.Fields;
+using System.IO;
 
 namespace eOpcina.Controllers
 {
@@ -165,6 +172,125 @@ namespace eOpcina.Controllers
         private bool ZahtjevExists(int id)
         {
             return _context.Zahtjev.Any(e => e.Id == id);
+        }
+        
+        
+        private async Task<bool> ProvjeriUsloveAsync(int idKorisnika)
+        {
+            var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
+            if (korisnik == null)
+                return false;
+            if (korisnik.RokTrajanjaLicneKarte < DateTime.Now)
+                return false;
+            return true;
+        }
+
+
+        private async Task PosaljiPDFEmail(string emailKorisnika, byte[] pdfBytes, string subject, string body)
+        {
+            var fromAddress = new MailAddress("eopcina@gmail.com", "eOpcina");
+            var toAddress = new MailAddress(emailKorisnika);
+            const string fromPassword = "druga_godina2";
+
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                // Create attachment from byte array
+                message.Attachments.Add(new Attachment(
+                    new MemoryStream(pdfBytes),
+                    "dokument.pdf",
+                    "application/pdf"
+                ));
+
+                await smtp.SendMailAsync(message);
+            }
+        }
+
+
+        public async Task<IActionResult> ObradiZahtjev(int idKorisnika, TipDokumenta tipDokumenta, Razlog razlog)
+        {
+            var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
+            if (korisnik == null)
+                return NotFound("Korisnik nije pronađen.");
+
+            if (!await ProvjeriUsloveAsync(idKorisnika))
+            {
+                return BadRequest("Korisnik ne ispunjava uslove za obradu zahtjeva.");
+            }
+
+            var datumSlanja = DateTime.Now;
+
+            var sablon = await _context.Sablon
+                .FirstOrDefaultAsync(s => s.TipDokumenta == tipDokumenta);
+            if (sablon == null)
+                return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
+
+            byte[] sablonPDF = sablon.PDFSablona;
+            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\NEKA\LOKACIJA\TESTNOG\PDFA\NA\KOMPJUTERU");
+            var datumIzdavanja = DateTime.Now;
+
+            /*
+            using (var templateStream = new MemoryStream(sablonPDF))
+            using (var outputStream = new MemoryStream())
+            {
+                var pdfReader = new PdfReader(templateStream);
+                var pdfWriter = new PdfWriter(outputStream);
+                var pdfDoc = new PdfDocument(pdfReader, pdfWriter);
+                var form = PdfAcroForm.GetAcroForm(pdfDoc, true);
+                var fields = form.GetFormFields();
+
+                // Fill the fields
+                fields["Ime"].SetValue(korisnik.Ime);
+                fields["Prezime"].SetValue(korisnik.Prezime);
+                fields["Datum"].SetValue(datumIzdavanja.ToShortDateString());
+
+                form.FlattenFields(); // Optional: makes the fields uneditable
+
+                pdfDoc.Close();
+                popunjeniPDF = outputStream.ToArray();
+            }
+            */
+
+            var dokument = new Dokument
+            {
+                DatumIzdavanja = DateTime.Now,
+                RokTrajanja = int.MaxValue,
+                IdSablona = sablon.Id,
+                PDFDokumenta = popunjeniPDF
+            };
+            _context.Dokument.Add(dokument);
+            await _context.SaveChangesAsync();
+
+            var zahtjev = new Zahtjev
+            {
+                IdKorisnika = idKorisnika.ToString(),
+                IdDokumenta = dokument.Id,
+                RazlogZahtjeva = razlog,
+                DatumSlanja = datumSlanja
+            };
+            _context.Zahtjev.Add(zahtjev);
+            await _context.SaveChangesAsync();
+
+            await PosaljiPDFEmail(
+                emailKorisnika: korisnik.Email,
+                pdfBytes: dokument.PDFDokumenta,
+                subject: "Dokument je spreman",
+                body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumenta} za zahtjev poslan " +
+                      $"{datumSlanja}.\nS poštovanjem,\neOpcina Team"
+                );
+
+            return View();
         }
     }
 }
