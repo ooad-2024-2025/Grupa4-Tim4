@@ -173,6 +173,10 @@ namespace eOpcina.Data.Migrations
                     b.Property<int>("IdSablona")
                         .HasColumnType("int");
 
+                    b.Property<byte[]>("PDFDokumenta")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<int>("RokTrajanja")
                         .HasColumnType("int");
 
@@ -285,6 +289,10 @@ namespace eOpcina.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<byte[]>("PDFSablona")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("TipDokumenta")
                         .HasColumnType("int");

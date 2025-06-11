@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\etf\\cetvrtisemestar\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\etf\\cetvrtisemestar\\ooad\\grupa4-tim4\\eopcina\\eopcina\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\etf\\cetvrtisemestar\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "eOpcina\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Properties\\launchSettings.json",
+              "RelativeToolTip": "eOpcina\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-10T12:48:48.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ZahtjevController.cs",
+              "DocumentMoniker": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\ZahtjevController.cs",
+              "ToolTip": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs*",
+              "RelativeToolTip": "eOpcina\\Controllers\\ZahtjevController.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T05:32:09.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "eOpcina\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T05:27:50.192Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

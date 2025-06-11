@@ -13,6 +13,8 @@ namespace eOpcina.Models
         [ForeignKey("Dokument")]
         public int IdDokumenta { get; set; }
         public Razlog RazlogZahtjeva { get; set; }
+        public Korisnik Korisnik { get; set; }
+        public Dokument Dokument { get; set; }
 
         public Zahtjev() { }
     }
