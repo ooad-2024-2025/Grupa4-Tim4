@@ -1,0 +1,10 @@
+﻿@model eOpcina.Models.Korisnik
+
+<h2>Uredi korisnika</h2>
+
+<form asp-action="Uredi" method="post">
+    <input type="hidden" asp-for="Id" />
+    <!-- ostala polja isto kao u Dodaj -->
+    <!-- ... -->
+    <button type="submit">Sačuvaj promjene</button>
+</form>

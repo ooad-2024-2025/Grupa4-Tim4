@@ -1,18 +1,98 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\",
+  "WorkspaceRootPath": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\etf\\cetvrtisemestar\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\korisnikcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\korisnikcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\korisnik\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\korisnik\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\korisnik\\uredi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\korisnik\\uredi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\korisnik\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\korisnik\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\historijazahtjeva.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\home\\historijazahtjeva.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\sabloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\sabloncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\sablon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\sablon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\tipdokumenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\tipdokumenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\dokument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\dokument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\etf\\cetvrtisemestar\\ooad\\grupa4-tim4\\eopcina\\eopcina\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\zahtjev.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\zahtjev.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\etf\\cetvrtisemestar\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\spol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\spol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\razlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\razlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,40 +106,283 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "eOpcina\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Properties\\launchSettings.json",
-              "RelativeToolTip": "eOpcina\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-10T12:48:48.097Z"
+              "DocumentIndex": 5,
+              "Title": "Uredi.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Uredi.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Korisnik\\Uredi.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Uredi.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Korisnik\\Uredi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:23:20.141Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ZahtjevController.cs",
-              "DocumentMoniker": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs",
-              "RelativeDocumentMoniker": "eOpcina\\Controllers\\ZahtjevController.cs",
-              "ToolTip": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs*",
-              "RelativeToolTip": "eOpcina\\Controllers\\ZahtjevController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKUAAAAFAAAA",
+              "Title": "KorisnikController.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\KorisnikController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\KorisnikController.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\KorisnikController.cs",
+              "RelativeToolTip": "eOpcina\\Controllers\\KorisnikController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T05:32:09.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T13:07:23.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dodaj.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Dodaj.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Korisnik\\Dodaj.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Dodaj.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Korisnik\\Dodaj.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:23:51.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Index.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Korisnik\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Index.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Korisnik\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:37:17.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HistorijaZahtjeva.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\HistorijaZahtjeva.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\HistorijaZahtjeva.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\HistorijaZahtjeva.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Home\\HistorijaZahtjeva.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:25:29.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "eOpcina\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAgwG0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T05:27:50.192Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "eOpcina\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\ETF\\CetvrtiSemestar\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "eOpcina\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Title": "Korisnik.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Korisnik.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Korisnik.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Korisnik.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Korisnik.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwAoAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T05:27:50.192Z"
+              "WhenOpened": "2025-06-12T12:07:07.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:56:38.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:01:32.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAEwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:39:09.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Profil.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\Profil.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Profil.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Home\\Profil.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:51:37.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Register.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\Register.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Register.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Home\\Register.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:27:37.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SablonController.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\SablonController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\SablonController.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\SablonController.cs",
+              "RelativeToolTip": "eOpcina\\Controllers\\SablonController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAwwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:08:00.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TipDokumenta.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\TipDokumenta.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\TipDokumenta.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\TipDokumenta.cs",
+              "RelativeToolTip": "eOpcina\\Models\\TipDokumenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:07:32.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "eOpcina\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\appsettings.Development.json",
+              "RelativeToolTip": "eOpcina\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-12T12:38:22.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Dokument.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Dokument.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Dokument.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Dokument.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Dokument.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:00:51.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Sablon.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Sablon.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Sablon.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Sablon.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Sablon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:07:20.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Zahtjev.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Zahtjev.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Zahtjev.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Zahtjev.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Zahtjev.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:07:38.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Spol.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Spol.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Spol.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Spol.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Spol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:07:26.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Razlog.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Razlog.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Razlog.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Razlog.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Razlog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:07:13.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ZahtjevController.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\ZahtjevController.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs",
+              "RelativeToolTip": "eOpcina\\Controllers\\ZahtjevController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T05:32:09.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "eOpcina\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T12:06:59.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "eOpcina\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Properties\\launchSettings.json",
+              "RelativeToolTip": "eOpcina\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-10T12:48:48.097Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

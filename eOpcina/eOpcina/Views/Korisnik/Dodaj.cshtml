@@ -1,0 +1,47 @@
+﻿@model eOpcina.Models.Korisnik
+
+<h2>Dodaj korisnika</h2>
+
+<form asp-action="Dodaj" method="post">
+    <div>
+        <label>Ime:</label>
+        <input asp-for="Ime" />
+    </div>
+    <div>
+        <label>Prezime:</label>
+        <input asp-for="Prezime" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label>Lozinka:</label>
+        <input name="password" type="password" />
+    </div>
+    <div>
+        <label>JMBG:</label>
+        <input asp-for="JMBG" />
+    </div>
+    <div>
+        <label>Elektronski potpis:</label>
+        <input asp-for="ElektronskiPotpis" />
+    </div>
+    <div>
+        <label>Broj lične karte:</label>
+        <input asp-for="BrojLicneKarte" />
+    </div>
+    <div>
+        <label>Rok trajanja lične karte:</label>
+        <input asp-for="RokTrajanjaLicneKarte" type="date" />
+    </div>
+    <div>
+        <label>Spol:</label>
+        <select asp-for="Spol" asp-items="Html.GetEnumSelectList<eOpcina.Models.Spol>()"></select>
+    </div>
+    <div>
+        <label>Adresa prebivališta:</label>
+        <input asp-for="AdresaPrebivalista" />
+    </div>
+    <button type="submit">Dodaj korisnika</button>
+</form>

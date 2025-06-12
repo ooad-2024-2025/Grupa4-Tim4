@@ -1,0 +1,27 @@
+﻿@model IEnumerable<eOpcina.Models.Korisnik>
+
+<h2>Lista korisnika</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var korisnik in Model)
+        {
+            <tr>
+                <td>@korisnik.Ime</td>
+                <td>@korisnik.Prezime</td>
+                <td>@korisnik.Email</td>
+                <td>
+                    <a asp-controller="Korisnik" asp-action="Uredi" asp-route-id="@korisnik.Id">Uredi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

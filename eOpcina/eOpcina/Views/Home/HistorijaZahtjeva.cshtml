@@ -1,0 +1,32 @@
+﻿@model IEnumerable<eOpcina.Models.Zahtjev>
+
+@{
+    ViewData["Title"] = "Historija Zahtjeva";
+}
+
+<h2>Historija Zahtjeva</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Datum Slanja</th>
+            <th>Korisnik</th>
+            <th>Dokument</th>
+            <th>Razlog</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.DatumSlanja.ToString("dd.MM.yyyy")</td>
+                <td>@(item.Korisnik != null ? item.Korisnik.Ime + " " + item.Korisnik.Prezime : "N/A")</td>
+                <td>@(item.Dokument != null ? item.Dokument.Id.ToString() : "N/A")</td>
+                <td>@item.RazlogZahtjeva</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
