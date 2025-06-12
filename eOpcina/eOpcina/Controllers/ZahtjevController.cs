@@ -17,6 +17,7 @@ using System.IO;
 using eOpcina.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using Microsoft.AspNetCore.Identity;
 
 namespace eOpcina.Controllers
 {
@@ -24,10 +25,13 @@ namespace eOpcina.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public ZahtjevController(ApplicationDbContext context)
+        private readonly UserManager<Korisnik> _userManager;
+
+        public ZahtjevController(ApplicationDbContext context, UserManager<Korisnik> userManager)
         {
             _context = context;
-        }
+            _userManager = userManager;
+        }   
 
         // GET: Zahtjev
         public async Task<IActionResult> Index()
@@ -112,7 +116,8 @@ namespace eOpcina.Controllers
 
                 return View(viewModel);
             }
-            await ObradiZahtjev("1", viewModel.TipDokumenta, viewModel.RazlogZahtjeva);
+            var idKorisnika = _userManager.GetUserId(User);
+            await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva);
 
             return RedirectToAction(nameof(Index));
         }
@@ -260,18 +265,17 @@ namespace eOpcina.Controllers
         public async Task<IActionResult> ObradiZahtjev(string idKorisnika, TipDokumenta tipDokumenta, Razlog razlog)
         {
             if (!Enum.IsDefined(typeof(TipDokumenta), tipDokumenta) || !Enum.IsDefined(typeof(Razlog), razlog))
-            {
                 return BadRequest("Nevažeći tip dokumenta ili razlog zahtjeva.");
-            }
+
+            if(idKorisnika == null)
+                return BadRequest("Korisnik nije ulogovan.");
 
             var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
             if (korisnik == null)
                 return NotFound("Korisnik nije pronađen.");
 
             if (!await ProvjeriUsloveAsync(idKorisnika))
-            {
                 return BadRequest("Korisnik ne ispunjava uslove za obradu zahtjeva.");
-            }
 
             var datumSlanja = DateTime.Now;
 
@@ -306,11 +310,11 @@ namespace eOpcina.Controllers
             }
             */
 
-            /*var dokument = new Dokument
+            var dokument = new Dokument
             {
                 DatumIzdavanja = DateTime.Now,
                 RokTrajanja = int.MaxValue,
-                IdSablona = sablon.Id,
+                IdSablona = 1,                      // HARDKODIRANO
                 PDFDokumenta = popunjeniPDF
             };
             _context.Dokument.Add(dokument);
@@ -324,7 +328,7 @@ namespace eOpcina.Controllers
                 DatumSlanja = datumSlanja
             };
             _context.Zahtjev.Add(zahtjev);
-            await _context.SaveChangesAsync();*/
+            await _context.SaveChangesAsync();
 
             var tipDokumentaNormalized = tipDokumenta.GetType()
                         .GetMember(tipDokumenta.ToString())
