@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -16,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\korisnikcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\korisnikcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\korisnik\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -48,10 +52,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\home\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\users\\hsadi\\desktop\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -105,23 +105,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KorisnikController.cs",
-              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\KorisnikController.cs",
-              "RelativeDocumentMoniker": "eOpcina\\Controllers\\KorisnikController.cs",
-              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\KorisnikController.cs",
-              "RelativeToolTip": "eOpcina\\Controllers\\KorisnikController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T13:07:23.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Index.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\Korisnik\\Index.cshtml",
@@ -133,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "HistorijaZahtjeva.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\HistorijaZahtjeva.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\HistorijaZahtjeva.cshtml",
@@ -145,19 +133,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "eOpcina\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\HomeController.cs",
               "RelativeToolTip": "eOpcina\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T05:27:50.192Z"
+              "WhenOpened": "2025-06-10T05:27:50.192Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Korisnik.cs",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Korisnik.cs",
               "RelativeDocumentMoniker": "eOpcina\\Models\\Korisnik.cs",
@@ -169,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SablonController.cs",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\SablonController.cs",
               "RelativeDocumentMoniker": "eOpcina\\Controllers\\SablonController.cs",
@@ -177,25 +166,24 @@
               "RelativeToolTip": "eOpcina\\Controllers\\SablonController.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAswJIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T12:08:00.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T12:08:00.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "eOpcina\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAkwHAAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAlwDgAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-12T12:39:09.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\.gitignore",
               "RelativeDocumentMoniker": "..\\.gitignore",
@@ -207,7 +195,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Profil.cshtml",
+              "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\Profil.cshtml",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Profil.cshtml",
+              "RelativeToolTip": "eOpcina\\Views\\Home\\Profil.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T12:51:37.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "KorisnikController.cs",
+              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\KorisnikController.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Controllers\\KorisnikController.cs",
+              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\KorisnikController.cs",
+              "RelativeToolTip": "eOpcina\\Controllers\\KorisnikController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:07:23.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Dodaj.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Dodaj.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\Korisnik\\Dodaj.cshtml",
@@ -219,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Uredi.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Korisnik\\Uredi.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\Korisnik\\Uredi.cshtml",
@@ -231,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\Index.cshtml",
@@ -243,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "eOpcina\\Views\\_ViewStart.cshtml",
@@ -252,18 +265,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-12T13:01:32.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Profil.cshtml",
-              "DocumentMoniker": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Profil.cshtml",
-              "RelativeDocumentMoniker": "eOpcina\\Views\\Home\\Profil.cshtml",
-              "ToolTip": "C:\\Users\\hsadi\\Desktop\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Home\\Profil.cshtml",
-              "RelativeToolTip": "eOpcina\\Views\\Home\\Profil.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T12:51:37.884Z"
             },
             {
               "$type": "Document",

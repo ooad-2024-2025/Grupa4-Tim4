@@ -306,3 +306,4 @@ C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\refint\
 C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\eOpcina.pdb
 C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\eOpcina.genruntimeconfig.cache
 C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\ref\eOpcina.dll
+C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
