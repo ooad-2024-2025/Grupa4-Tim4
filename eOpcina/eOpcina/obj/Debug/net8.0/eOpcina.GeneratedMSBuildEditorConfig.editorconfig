@@ -48,12 +48,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hsadi/Desktop/OOAD/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/HistorijaZahtjeva.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIaXN0b3JpamFaYWh0amV2YS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/hsadi/Desktop/OOAD/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hsadi/Desktop/OOAD/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/PrikaziHistorijuZahtjeva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmlrYXppSGlzdG9yaWp1WmFodGpldmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hsadi/Desktop/OOAD/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/Privacy.cshtml]

@@ -1,5 +1,6 @@
 using eOpcina.Data;
 using eOpcina.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,100 +12,89 @@ namespace eOpcina.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
-      
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+        private readonly UserManager<Korisnik> _userManager;
+
+
+        public HomeController(
+     ILogger<HomeController> logger,
+     ApplicationDbContext context,
+     UserManager<Korisnik> userManager)
         {
             _logger = logger;
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Home/Profil
         public async Task<IActionResult> Profil()
         {
-            var email = User.Identity.Name;
+            // Dohvati trenutno ulogovanog korisnika koristeæi UserManager
+            var korisnik = await _userManager.GetUserAsync(User);
 
-            if (string.IsNullOrEmpty(email))
-                return RedirectToAction("Index"); // ili neka stranica za prijavu
-
-            var korisnik = await _context.Korisnik.FirstOrDefaultAsync(k => k.Email == email);
             if (korisnik == null)
+                return RedirectToAction("Index"); // ili stranica za prijavu
+
+            // Opcionalno: ako želiš dodatno podatke iz baze ukljuèiti
+            var korisnikDetalji = await _context.Korisnik       
+                .FirstOrDefaultAsync(k => k.Id == korisnik.Id);
+
+            if (korisnikDetalji == null)
                 return NotFound("Korisnik nije pronaðen.");
 
-            return View(korisnik); // prosleðujemo model korisnika View-u
+            return View("Profil", korisnikDetalji); // koristi odgovarajuæi View
         }
-
 
         // GET: Home/HistorijaZahtjeva
         public async Task<IActionResult> PrikaziHistorijuZahtjeva(
-     string sortOrder,           // "datum" ili "dokument", default po datumu
-     int? tipDokumentaFilter,    // filter po tipu dokumenta (nullable)
-     DateTime? fromDate,         // filter od datuma
-     DateTime? toDate            // filter do datuma
- )
+    string sortOrder,
+    int? tipDokumentaFilter,
+    DateTime? fromDate,
+    DateTime? toDate)
         {
-            var email = User.Identity.Name;
-
-            var korisnik = await _context.Korisnik.FirstOrDefaultAsync(k => k.Email == email);
-            if (korisnik == null)
+            // Dobavi ID trenutno ulogovanog korisnika
+            var korisnikId = _userManager.GetUserId(User);
+            if (korisnikId == null)
                 return NotFound("Korisnik nije pronaðen.");
 
             DateTime godinaUnazad = DateTime.Now.AddYears(-1);
 
-            // Poèetni query za zahtjeve korisnika unazad godinu dana
             var query = _context.Zahtjev
                 .Include(z => z.Dokument)
-                    .ThenInclude(d => d.Sablon)  // ukljuèi Sablon jer nam treba TipDokumenta
-                .Where(z => z.IdKorisnika == korisnik.Id &&
+                    .ThenInclude(d => d.Sablon)
+                .Where(z => z.IdKorisnika == korisnikId &&
                             z.DatumSlanja >= godinaUnazad)
                 .AsQueryable();
 
-            // Filter po tipu dokumenta ako je zadano
             if (tipDokumentaFilter.HasValue)
             {
-                query = query.Where(z => z.Dokument != null
-                                         && z.Dokument.Sablon != null
-                                         && (int)z.Dokument.Sablon.TipDokumenta == tipDokumentaFilter.Value);
+                query = query.Where(z =>
+                    z.Dokument.Sablon.TipDokumenta == (TipDokumenta)tipDokumentaFilter.Value);
             }
 
-            // Filter po datumu slanja od
             if (fromDate.HasValue)
-            {
                 query = query.Where(z => z.DatumSlanja >= fromDate.Value);
-            }
 
-            // Filter po datumu slanja do
             if (toDate.HasValue)
-            {
                 query = query.Where(z => z.DatumSlanja <= toDate.Value);
-            }
 
             // Sortiranje
-            switch (sortOrder)
+            query = sortOrder switch
             {
-                case "dokument":
-                    query = query.OrderBy(z => z.Dokument.Sablon.TipDokumenta);
-                    break;
-                case "datum_desc":
-                    query = query.OrderByDescending(z => z.DatumSlanja);
-                    break;
-                case "datum_asc":
-                    query = query.OrderBy(z => z.DatumSlanja);
-                    break;
-                default:
-                    query = query.OrderByDescending(z => z.DatumSlanja);
-                    break;
-            }
+                "dokument" => query.OrderBy(z => z.Dokument.Sablon.TipDokumenta),
+                "datum_asc" => query.OrderBy(z => z.DatumSlanja),
+                _ => query.OrderByDescending(z => z.DatumSlanja),
+            };
 
             var zahtjevi = await query.ToListAsync();
 
-            // Predaj ViewData sa filterima i sortiranjem za View
             ViewData["SortOrder"] = sortOrder;
             ViewData["TipDokumentaFilter"] = tipDokumentaFilter;
             ViewData["FromDate"] = fromDate?.ToString("yyyy-MM-dd");
             ViewData["ToDate"] = toDate?.ToString("yyyy-MM-dd");
 
-            return View(zahtjevi);
+            return View("PrikaziHistorijuZahtjeva", zahtjevi);
         }
+
 
 
         public IActionResult Index()

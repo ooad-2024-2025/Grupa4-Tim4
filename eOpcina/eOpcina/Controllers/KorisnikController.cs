@@ -1,7 +1,9 @@
 ﻿using eOpcina.Data;
 using eOpcina.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace eOpcina.Controllers
@@ -9,21 +11,51 @@ namespace eOpcina.Controllers
     public class KorisnikController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<Korisnik> _userManager;
 
-
-        public KorisnikController(ApplicationDbContext context)
+        public KorisnikController(ApplicationDbContext context, UserManager<Korisnik> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
-
 
         // GET: Korisnik/Index
         public async Task<IActionResult> Index()
         {
-            var korisnici = await _context.Korisnik.ToListAsync();
+            var korisnici = await _userManager.Users.ToListAsync();
             return View(korisnici);
         }
 
+        // POST: Korisnik/SnimiSve
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SnimiSve(List<Korisnik> korisnici)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach (var k in korisnici)
+                {
+                    // Možeš dodatno provjeriti postoji li korisnik u bazi prije update-a
+                    var korisnikUBazi = await _context.Korisnik.FindAsync(k.Id);
+                    if (korisnikUBazi != null)
+                    {
+                        // Update relevantnih polja, nemoj direktno update-ati cijeli objekt zbog tracking-a
+                        korisnikUBazi.Ime = k.Ime;
+                        korisnikUBazi.Prezime = k.Prezime;
+                        korisnikUBazi.Email = k.Email;
+                        korisnikUBazi.JMBG = k.JMBG;
+                        korisnikUBazi.UserName = k.UserName;
+                        // Dodaj ostala polja ako treba
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            // Ako model nije validan, vrati listu korisnika da se može ponovo urediti
+            return View("Index", korisnici);
+        }
 
 
         // GET: Korisnik/Dodaj
@@ -46,49 +78,53 @@ namespace eOpcina.Controllers
             return View(korisnik);
         }
 
-        // GET: Korisnik/Uredi/{id}
-        public async Task<IActionResult> Uredi(string id)
+        // GET: Korisnik/Uredi
+        public async Task<IActionResult> Uredi()
         {
-            if (string.IsNullOrEmpty(id))
-                return NotFound();
-
-            var korisnik = await _context.Korisnik.FindAsync(id);
-            if (korisnik == null)
-                return NotFound();
-
-            return View(korisnik);
+            var korisnici = await _userManager.Users.ToListAsync();
+            return View(korisnici);
         }
 
-        // POST: Korisnik/Uredi/{id}
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Uredi(string id, Korisnik korisnik)
+        public async Task<IActionResult> Uredi(List<Korisnik> korisnici)
         {
-            if (id != korisnik.Id)
-                return NotFound();
-
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                try
+                return View(korisnici);
+            }
+
+            foreach (var korisnik in korisnici)
+            {
+                var existingUser = await _userManager.FindByIdAsync(korisnik.Id);
+                if (existingUser != null)
                 {
-                    _context.Update(korisnik);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction("Index", "Home");
+                    existingUser.Ime = korisnik.Ime;
+                    existingUser.Prezime = korisnik.Prezime;
+                    existingUser.Email = korisnik.Email;
+                    existingUser.JMBG = korisnik.JMBG;
+                    // Ostala polja ako treba
+
+                    var result = await _userManager.UpdateAsync(existingUser);
+                    if (!result.Succeeded)
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                        return View(korisnici);
+                    }
                 }
-                catch (DbUpdateConcurrencyException)
+                else
                 {
-                    if (!KorisnikExists(korisnik.Id))
-                        return NotFound();
-                    else
-                        throw;
+                    ModelState.AddModelError("", "Korisnik nije pronađen.");
+                    return View(korisnici);
                 }
             }
-            return View(korisnik);
+
+            return RedirectToAction(nameof(Index));
         }
 
-        private bool KorisnikExists(string id)
-        {
-            return _context.Korisnik.Any(e => e.Id == id);
-        }
     }
 }

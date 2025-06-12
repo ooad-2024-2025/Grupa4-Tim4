@@ -1,27 +1,57 @@
-﻿@model IEnumerable<eOpcina.Models.Korisnik>
+﻿@model List<eOpcina.Models.Korisnik>
 
-<h2>Lista korisnika</h2>
+@{
+    ViewData["Title"] = "Lista korisnika";
+}
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Ime</th>
-            <th>Prezime</th>
-            <th>Email</th>
-            <th>Akcije</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var korisnik in Model)
-        {
+<h2>Lista korisnika - Uredi više korisnika</h2>
+
+<form asp-action="SnimiSve" method="post">
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>@korisnik.Ime</td>
-                <td>@korisnik.Prezime</td>
-                <td>@korisnik.Email</td>
-                <td>
-                    <a asp-controller="Korisnik" asp-action="Uredi" asp-route-id="@korisnik.Id">Uredi</a>
-                </td>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Email</th>
+                <th>Korisničko ime</th>
+                <th>JMBG</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="hidden" asp-for="@Model[i].Id" />
+                        <input asp-for="@Model[i].Ime" class="form-control" />
+                        <span asp-validation-for="@Model[i].Ime" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].Prezime" class="form-control" />
+                        <span asp-validation-for="@Model[i].Prezime" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].Email" class="form-control" />
+                        <span asp-validation-for="@Model[i].Email" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].UserName" class="form-control" />
+                        <span asp-validation-for="@Model[i].UserName" class="text-danger"></span>
+                    </td>
+                    <td>
+                        <input asp-for="@Model[i].JMBG" class="form-control" />
+                        <span asp-validation-for="@Model[i].JMBG" class="text-danger"></span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="submit" class="btn btn-primary">Snimi sve izmjene</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
