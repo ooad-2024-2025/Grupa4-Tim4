@@ -6,9 +6,11 @@ namespace eOpcina.ViewModels
     public class ZahtjevCreateViewModel
     {
         [Required]
-        public Razlog RazlogZahtjeva { get; set; }
+        [Display(Name = "Tip dokumenta")]
+        public TipDokumenta TipDokumenta { get; set; }
 
         [Required]
-        public TipDokumenta TipDokumenta { get; set; }
+        [Display(Name = "Razlog zahtjeva")]
+        public Razlog RazlogZahtjeva { get; set; }
     }
 }

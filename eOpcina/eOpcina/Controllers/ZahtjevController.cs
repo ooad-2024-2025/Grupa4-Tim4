@@ -15,6 +15,8 @@ using iText.Forms;
 using iText.Forms.Fields;
 using System.IO;
 using eOpcina.ViewModels;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 namespace eOpcina.Controllers
 {
@@ -65,7 +67,7 @@ namespace eOpcina.Controllers
                     Text = t.ToString()
                 });
 
-            ViewBag.Razlozi = Enum.GetValues(typeof(Razlog))
+            ViewBag.RazloziZahtjeva = Enum.GetValues(typeof(Razlog))
                 .Cast<Razlog>()
                 .Select(r => new SelectListItem
                 {
@@ -100,7 +102,7 @@ namespace eOpcina.Controllers
                         Value = ((int)t).ToString(),
                         Text = t.ToString()
                     });
-                ViewBag.Razlozi = Enum.GetValues(typeof(Razlog))
+                ViewBag.RazloziZahtjeva = Enum.GetValues(typeof(Razlog))
                     .Cast<Razlog>()
                     .Select(r => new SelectListItem
                     {
@@ -324,11 +326,15 @@ namespace eOpcina.Controllers
             _context.Zahtjev.Add(zahtjev);
             await _context.SaveChangesAsync();*/
 
+            var tipDokumentaNormalized = tipDokumenta.GetType()
+                        .GetMember(tipDokumenta.ToString())
+                        .First()
+                        .GetCustomAttribute<DisplayAttribute>()?.Name ?? tipDokumenta.ToString();
             await PosaljiPDFEmail(
                 emailKorisnika: korisnik.Email,
                 pdfBytes: popunjeniPDF,
                 subject: "Dokument je spreman",
-                body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumenta} za zahtjev poslan " +
+                body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumentaNormalized} za zahtjev poslan " +
                       $"{datumSlanja}.\nS poštovanjem,\neOpcina Team"
                 );
 

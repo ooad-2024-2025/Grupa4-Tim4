@@ -5,6 +5,32 @@
     ViewData["Title"] = "Create";
 }
 
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
+@{
+    var razlogOpcije = Enum.GetValues(typeof(Razlog))
+        .Cast<Razlog>()
+        .Select(r => new SelectListItem
+                {
+                    Value = ((int)r).ToString(),
+                    Text = r.GetType()
+                             .GetMember(r.ToString())
+                             .First()
+                             .GetCustomAttribute<DisplayAttribute>()?.Name ?? r.ToString()
+                });
+
+    var tipoviDokumenta = Enum.GetValues(typeof(TipDokumenta))
+        .Cast<TipDokumenta>()
+        .Select(t => new SelectListItem
+                {
+                    Value = ((int)t).ToString(),
+                    Text = t.GetType()
+                             .GetMember(t.ToString())
+                             .First()
+                             .GetCustomAttribute<DisplayAttribute>()?.Name ?? t.ToString()
+                });
+}
+
 <h1>Create</h1>
 
 <h4>Zahtjev</h4>
@@ -15,16 +41,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
-                <label asp-for="RazlogZahtjeva" class="control-label"></label>
-                <select asp-for="RazlogZahtjeva" class="form-control"
-                        asp-items="Html.GetEnumSelectList<Razlog>()"></select>
-                <span asp-validation-for="RazlogZahtjeva" class="text-danger"></span>
+                <label asp-for="TipDokumenta" class="control-label"></label>
+                <select asp-for="TipDokumenta" class="form-control">
+                    @foreach (var item in tipoviDokumenta)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
             </div>
 
             <div class="form-group">
-                <label asp-for="TipDokumenta" class="control-label"></label>
-                <select asp-for="TipDokumenta" class="form-control" asp-items="ViewBag.TipoviDokumenata"></select>
-                <span asp-validation-for="TipDokumenta" class="text-danger"></span>
+                <label asp-for="RazlogZahtjeva" class="control-label"></label>
+                <select asp-for="RazlogZahtjeva" class="form-control">
+                    @foreach (var item in razlogOpcije)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
             </div>
 
             <div class="form-group">
