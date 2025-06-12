@@ -120,7 +120,7 @@ namespace eOpcina.Areas.Identity.Pages.Account
                 }
 
                 // Try signing in with username
-                var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, false, lockoutOnFailure: false);
+                /*var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
@@ -139,7 +139,9 @@ namespace eOpcina.Areas.Identity.Pages.Account
                 {
                     ModelState.AddModelError(string.Empty, "Neispravan JMBG ili lozinka.");
                     return Page();
-                }
+                }*/
+
+                await _signInManager.SignInAsync(user, isPersistent: false);
             }
 
             // If we got this far, something failed, redisplay form

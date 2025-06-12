@@ -14,6 +14,7 @@ using iText.Kernel.Pdf;
 using iText.Forms;
 using iText.Forms.Fields;
 using System.IO;
+using eOpcina.ViewModels;
 
 namespace eOpcina.Controllers
 {
@@ -56,27 +57,62 @@ namespace eOpcina.Controllers
         // GET: Zahtjev/Create
         public IActionResult Create()
         {
-            ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id");
-            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id");
-            return View();
+            ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
+                .Cast<TipDokumenta>()
+                .Select(t => new SelectListItem
+                {
+                    Value = ((int)t).ToString(),
+                    Text = t.ToString()
+                });
+
+            ViewBag.Razlozi = Enum.GetValues(typeof(Razlog))
+                .Cast<Razlog>()
+                .Select(r => new SelectListItem
+                {
+                    Value = ((int)r).ToString(),
+                    Text = r.ToString()
+                });
+
+            return View(new ZahtjevCreateViewModel());
         }
 
         // POST: Zahtjev/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,DatumSlanja,IdKorisnika,IdDokumenta,RazlogZahtjeva")] Zahtjev zahtjev)
+        public async Task<IActionResult> Create(ZahtjevCreateViewModel viewModel)
         {
-            if (ModelState.IsValid)
+            if (!Enum.IsDefined(typeof(TipDokumenta), viewModel.TipDokumenta))
             {
-                _context.Add(zahtjev);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError("TipDokumenta", "Nevažeći tip dokumenta.");
             }
-            ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id", zahtjev.IdDokumenta);
-            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
-            return View(zahtjev);
+
+            if (!Enum.IsDefined(typeof(Razlog), viewModel.RazlogZahtjeva))
+            {
+                ModelState.AddModelError("RazlogZahtjeva", "Nevažeći razlog zahtjeva");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
+                    .Cast<TipDokumenta>()
+                    .Select(t => new SelectListItem
+                    {
+                        Value = ((int)t).ToString(),
+                        Text = t.ToString()
+                    });
+                ViewBag.Razlozi = Enum.GetValues(typeof(Razlog))
+                    .Cast<Razlog>()
+                    .Select(r => new SelectListItem
+                    {
+                        Value = ((int)r).ToString(),
+                        Text = r.ToString()
+                    });
+
+                return View(viewModel);
+            }
+            await ObradiZahtjev("1", viewModel.TipDokumenta, viewModel.RazlogZahtjeva);
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Zahtjev/Edit/5
@@ -175,7 +211,7 @@ namespace eOpcina.Controllers
         }
         
         
-        private async Task<bool> ProvjeriUsloveAsync(int idKorisnika)
+        private async Task<bool> ProvjeriUsloveAsync(string idKorisnika)
         {
             var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
             if (korisnik == null)
@@ -190,7 +226,7 @@ namespace eOpcina.Controllers
         {
             var fromAddress = new MailAddress("eopcina@gmail.com", "eOpcina");
             var toAddress = new MailAddress(emailKorisnika);
-            const string fromPassword = "druga_godina2";
+            const string fromPassword = "whxbfafujcewcjpp";
 
             var smtp = new SmtpClient
             {
@@ -218,8 +254,14 @@ namespace eOpcina.Controllers
         }
 
 
-        public async Task<IActionResult> ObradiZahtjev(int idKorisnika, TipDokumenta tipDokumenta, Razlog razlog)
+        [HttpPost]
+        public async Task<IActionResult> ObradiZahtjev(string idKorisnika, TipDokumenta tipDokumenta, Razlog razlog)
         {
+            if (!Enum.IsDefined(typeof(TipDokumenta), tipDokumenta) || !Enum.IsDefined(typeof(Razlog), razlog))
+            {
+                return BadRequest("Nevažeći tip dokumenta ili razlog zahtjeva.");
+            }
+
             var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
             if (korisnik == null)
                 return NotFound("Korisnik nije pronađen.");
@@ -231,13 +273,13 @@ namespace eOpcina.Controllers
 
             var datumSlanja = DateTime.Now;
 
-            var sablon = await _context.Sablon
+            /*var sablon = await _context.Sablon
                 .FirstOrDefaultAsync(s => s.TipDokumenta == tipDokumenta);
             if (sablon == null)
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
-            byte[] sablonPDF = sablon.PDFSablona;
-            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\NEKA\LOKACIJA\TESTNOG\PDFA\NA\KOMPJUTERU");
+            byte[] sablonPDF = sablon.PDFSablona;*/
+            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\ETF\TreciSemestar\ASP\Zadaće\ASPZadaca1.pdf");
             var datumIzdavanja = DateTime.Now;
 
             /*
@@ -262,7 +304,7 @@ namespace eOpcina.Controllers
             }
             */
 
-            var dokument = new Dokument
+            /*var dokument = new Dokument
             {
                 DatumIzdavanja = DateTime.Now,
                 RokTrajanja = int.MaxValue,
@@ -280,11 +322,11 @@ namespace eOpcina.Controllers
                 DatumSlanja = datumSlanja
             };
             _context.Zahtjev.Add(zahtjev);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();*/
 
             await PosaljiPDFEmail(
                 emailKorisnika: korisnik.Email,
-                pdfBytes: dokument.PDFDokumenta,
+                pdfBytes: popunjeniPDF,
                 subject: "Dokument je spreman",
                 body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumenta} za zahtjev poslan " +
                       $"{datumSlanja}.\nS poštovanjem,\neOpcina Team"

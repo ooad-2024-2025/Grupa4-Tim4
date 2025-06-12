@@ -885,3 +885,15 @@ C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\runtimes\win-x86\na
 C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.barcodes.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.forms.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.io.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.kernel.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.layout.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.pdfa.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.sign.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.styledxmlparser.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.svg.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\itext.commons.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\BouncyCastle.Crypto.dll
