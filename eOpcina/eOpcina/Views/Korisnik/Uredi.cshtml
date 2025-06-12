@@ -4,7 +4,26 @@
 
 <form asp-action="Uredi" method="post">
     <input type="hidden" asp-for="Id" />
-    <!-- ostala polja isto kao u Dodaj -->
-    <!-- ... -->
-    <button type="submit">Sačuvaj promjene</button>
+
+    <div class="form-group">
+        <label asp-for="Ime"></label>
+        <input asp-for="Ime" class="form-control" />
+        <span asp-validation-for="Ime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Prezime"></label>
+        <input asp-for="Prezime" class="form-control" />
+        <span asp-validation-for="Prezime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <!-- Dodaj još polja ako ih imaš -->
+
+    <button type="submit" class="btn btn-primary">Sačuvaj promjene</button>
 </form>
