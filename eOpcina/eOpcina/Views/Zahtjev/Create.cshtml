@@ -1,7 +1,34 @@
-﻿@model eOpcina.Models.Zahtjev
+﻿@model eOpcina.ViewModels.ZahtjevCreateViewModel
+@using eOpcina.ViewModels
 
 @{
     ViewData["Title"] = "Create";
+}
+
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
+@{
+    var razlogOpcije = Enum.GetValues(typeof(Razlog))
+        .Cast<Razlog>()
+        .Select(r => new SelectListItem
+                {
+                    Value = ((int)r).ToString(),
+                    Text = r.GetType()
+                             .GetMember(r.ToString())
+                             .First()
+                             .GetCustomAttribute<DisplayAttribute>()?.Name ?? r.ToString()
+                });
+
+    var tipoviDokumenta = Enum.GetValues(typeof(TipDokumenta))
+        .Cast<TipDokumenta>()
+        .Select(t => new SelectListItem
+                {
+                    Value = ((int)t).ToString(),
+                    Text = t.GetType()
+                             .GetMember(t.ToString())
+                             .First()
+                             .GetCustomAttribute<DisplayAttribute>()?.Name ?? t.ToString()
+                });
 }
 
 <h1>Create</h1>
@@ -12,24 +39,27 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="DatumSlanja" class="control-label"></label>
-                <input asp-for="DatumSlanja" class="form-control" />
-                <span asp-validation-for="DatumSlanja" class="text-danger"></span>
+                <label asp-for="TipDokumenta" class="control-label"></label>
+                <select asp-for="TipDokumenta" class="form-control">
+                    @foreach (var item in tipoviDokumenta)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
             </div>
-            <div class="form-group">
-                <label asp-for="IdKorisnika" class="control-label"></label>
-                <select asp-for="IdKorisnika" class ="form-control" asp-items="ViewBag.IdKorisnika"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdDokumenta" class="control-label"></label>
-                <select asp-for="IdDokumenta" class ="form-control" asp-items="ViewBag.IdDokumenta"></select>
-            </div>
+
             <div class="form-group">
                 <label asp-for="RazlogZahtjeva" class="control-label"></label>
-                <select asp-for="RazlogZahtjeva" class="form-control"></select>
-                <span asp-validation-for="RazlogZahtjeva" class="text-danger"></span>
+                <select asp-for="RazlogZahtjeva" class="form-control">
+                    @foreach (var item in razlogOpcije)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
