@@ -1,7 +1,12 @@
-﻿namespace eOpcina.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace eOpcina.Models
 {
     public enum Spol
     {
-        Musko, Zensko
+        [Display(Name = "Muško")]
+        Musko,
+        [Display(Name = "Žensko")]
+        Zensko
     }
 }

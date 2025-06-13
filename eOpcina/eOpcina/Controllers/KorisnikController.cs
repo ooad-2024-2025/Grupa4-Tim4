@@ -73,18 +73,23 @@ namespace eOpcina.Controllers
             {
                 _context.Add(korisnik);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+
+                TempData["SuccessMessage"] = $"Uspješno je dodan Korisnik {korisnik.Ime} {korisnik.Prezime} sa JMBG {korisnik.JMBG}";
+                return RedirectToAction("Dodaj");
             }
+
             return View(korisnik);
         }
 
+
+
+        /*
         // GET: Korisnik/Uredi
         public async Task<IActionResult> Uredi()
         {
             var korisnici = await _userManager.Users.ToListAsync();
             return View(korisnici);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -124,6 +129,73 @@ namespace eOpcina.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+        */
+
+        public async Task<IActionResult> Uredi(string id)
+        {
+            var korisnik = await _userManager.FindByIdAsync(id);
+            if (korisnik == null)
+                return NotFound();
+
+            return View("Uredi", korisnik); // explicitly point to the right view
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Uredi(Korisnik korisnik)
+        {
+            if (!ModelState.IsValid)    
+            {
+                return View(korisnik);
+            }
+
+            var existing = await _userManager.FindByIdAsync(korisnik.Id);
+            if (existing == null)
+            {
+                return NotFound();
+            }
+
+            existing.Ime = korisnik.Ime;
+            existing.Prezime = korisnik.Prezime;
+            existing.Email = korisnik.Email;
+            existing.JMBG = korisnik.JMBG;
+            existing.BrojLicneKarte = korisnik.BrojLicneKarte;
+            existing.AdresaPrebivalista = korisnik.AdresaPrebivalista;
+            existing.RokTrajanjaLicneKarte = korisnik.RokTrajanjaLicneKarte;
+            existing.ElektronskiPotpis = korisnik.ElektronskiPotpis;
+            existing.Spol = korisnik.Spol;
+
+            var result = await _userManager.UpdateAsync(existing);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(korisnik);
+            }
+
+            TempData["Success"] = $"Uspješno ažuriran korisnik {existing.Ime} {existing.Prezime}.";
+            return RedirectToAction("Pretrazi");
+        }
+
+
+        // GET: Korisnik/Pretrazi
+        public IActionResult Pretrazi()
+        {
+            return View();
+        }
+
+        // POST: Korisnik/Pretrazi
+        [HttpPost]
+        public async Task<IActionResult> Pretrazi(string query)
+        {
+            var users = await _userManager.Users
+                .Where(k => (k.Ime + " " + k.Prezime).ToLower().Contains(query.ToLower()))
+                .ToListAsync();
+
+            return View("Pretrazi", users); // Pass users to the same view
         }
 
     }

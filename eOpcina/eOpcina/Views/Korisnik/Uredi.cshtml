@@ -1,39 +1,84 @@
-﻿@model List<eOpcina.Models.Korisnik>
+﻿@model eOpcina.Models.Korisnik
+
+@{
+    ViewData["Title"] = "Uredi korisnika";
+}
+
+<h2>Uredi korisnika</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
 
 <form asp-action="Uredi" method="post">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Ime</th>
-                <th>Prezime</th>
-                <th>Email</th>
-                <th>Korisničko ime</th>
-                <th>JMBG</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (int i = 0; i < Model.Count; i++)
-            {
-                <tr>
-                    <td>
-                        <input asp-for="@Model[i].Ime" class="form-control" />
-                        <input type="hidden" asp-for="@Model[i].Id" />
-                    </td>
-                    <td>
-                        <input asp-for="@Model[i].Prezime" class="form-control" />
-                    </td>
-                    <td>
-                        <input asp-for="@Model[i].Email" class="form-control" />
-                    </td>
-                    <td>
-                        <input asp-for="@Model[i].UserName" class="form-control" readonly />
-                    </td>
-                    <td>
-                        <input asp-for="@Model[i].JMBG" class="form-control" />
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <button type="submit" class="btn btn-primary">Sačuvaj promjene</button>
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Ime:</label>
+        <input asp-for="Ime" class="form-control" />
+        <span asp-validation-for="Ime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Prezime:</label>
+        <input asp-for="Prezime" class="form-control" />
+        <span asp-validation-for="Prezime" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Email:</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>JMBG:</label>
+        <input asp-for="JMBG" class="form-control" />
+        <span asp-validation-for="JMBG" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Broj lične karte:</label>
+        <input asp-for="BrojLicneKarte" class="form-control" />
+        <span asp-validation-for="BrojLicneKarte" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Adresa prebivališta:</label>
+        <input asp-for="AdresaPrebivalista" class="form-control" />
+        <span asp-validation-for="AdresaPrebivalista" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Rok trajanja lične karte:</label>
+        <input asp-for="RokTrajanjaLicneKarte" type="date" class="form-control"
+               value="@Model.RokTrajanjaLicneKarte.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="RokTrajanjaLicneKarte" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Elektronski potpis:</label>
+        <input asp-for="ElektronskiPotpis" class="form-control" />
+        <span asp-validation-for="ElektronskiPotpis" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Spol:</label>
+        <select asp-for="Spol" class="form-control"
+                asp-items="@(new SelectList(Enum.GetValues(typeof(eOpcina.Models.Spol))))">
+        </select>
+        <span asp-validation-for="Spol" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Sačuvaj promjene</button>
+    <a asp-action="Pretrazi" class="btn btn-secondary" style="margin-top: 40px;">Odustani</a>
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

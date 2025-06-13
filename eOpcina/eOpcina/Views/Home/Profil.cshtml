@@ -1,9 +1,43 @@
 ﻿@model eOpcina.Models.Korisnik
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
 
-<h2>Profil korisnika</h2>
+@{
+    ViewData["Title"] = "Profil korisnika";
 
-<div>
-    <p><strong>Ime i prezime:</strong> @Model.Ime @Model.Prezime</p>
-    <p><strong>Email:</strong> @Model.Email</p>
-    <!-- Dodaj ostale podatke korisnika ovdje -->
+    string GetDisplayName(Enum enumValue)
+    {
+        var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
+        if (member != null)
+        {
+            var displayAttr = member.GetCustomAttribute<DisplayAttribute>();
+            if (displayAttr != null)
+            {
+                return displayAttr.GetName();
+            }
+        }
+        return enumValue.ToString();
+    }
+}
+
+<h2 style="text-align: center; margin-top: 50px; margin-bottom: 50px;">Profil korisnika</h2>
+
+<div style="display: flex; justify-content: center; margin-bottom: 50px;">
+    <div style="background-color: #f2f2f2; padding: 30px 40px; border-radius: 12px; width: 100%; max-width: 600px; font-size: 20px; font-weight: 600; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <div style="margin-bottom: 20px;"><strong>Ime i prezime:</strong> @Model.Ime @Model.Prezime</div>
+        <div style="margin-bottom: 20px;"><strong>Spol:</strong> @GetDisplayName(Model.Spol)</div>
+        <div style="margin-bottom: 20px;"><strong>Adresa prebivališta:</strong> @Model.AdresaPrebivalista</div>
+        <div style="margin-bottom: 20px;"><strong>Email:</strong> @Model.Email</div>
+        <div style="margin-bottom: 20px;"><strong>JMBG:</strong> @Model.JMBG</div>
+        <div style="margin-bottom: 20px;"><strong>Broj lične karte:</strong> @Model.BrojLicneKarte</div>
+        <div style="margin-bottom: 20px;"><strong>Rok trajanja lične karte:</strong> @Model.RokTrajanjaLicneKarte.ToShortDateString()</div>
+    </div>
+
+
+</div>
+
+<div  style="display: flex; justify-content: center; margin-bottom: 50px;">
+    <p style="font-weight: 600; max-width: 600px; font-size: 16 px">
+        Ukoliko smatrate da date informacije nisu tačne ili je došlo do promjene u nekoj od njih posjetite vašu općinu i zatražite <strong>ažuriranje</strong> profila.
+    </p>
 </div>

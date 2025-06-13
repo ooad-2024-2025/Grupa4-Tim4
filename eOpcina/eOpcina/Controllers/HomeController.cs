@@ -1,4 +1,4 @@
-using eOpcina.Data;
+ï»¿using eOpcina.Data;
 using eOpcina.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -16,9 +16,9 @@ namespace eOpcina.Controllers
 
 
         public HomeController(
-     ILogger<HomeController> logger,
-     ApplicationDbContext context,
-     UserManager<Korisnik> userManager)
+             ILogger<HomeController> logger,
+             ApplicationDbContext context,
+             UserManager<Korisnik> userManager)
         {
             _logger = logger;
             _context = context;
@@ -28,33 +28,33 @@ namespace eOpcina.Controllers
         // GET: Home/Profil
         public async Task<IActionResult> Profil()
         {
-            // Dohvati trenutno ulogovanog korisnika koristeæi UserManager
+            // Dohvati trenutno ulogovanog korisnika koristeci UserManager
             var korisnik = await _userManager.GetUserAsync(User);
 
             if (korisnik == null)
                 return RedirectToAction("Index"); // ili stranica za prijavu
 
-            // Opcionalno: ako želiš dodatno podatke iz baze ukljuèiti
+            // Opcionalno: ako Å¾eliÅ¡ dodatno podatke iz baze ukljuciti
             var korisnikDetalji = await _context.Korisnik       
                 .FirstOrDefaultAsync(k => k.Id == korisnik.Id);
 
             if (korisnikDetalji == null)
-                return NotFound("Korisnik nije pronaðen.");
+                return NotFound("Korisnik nije pronaÄ‘en.");
 
-            return View("Profil", korisnikDetalji); // koristi odgovarajuæi View
+            return View("Profil", korisnikDetalji); // koristi odgovarajuci View
         }
 
         // GET: Home/HistorijaZahtjeva
         public async Task<IActionResult> PrikaziHistorijuZahtjeva(
-    string sortOrder,
-    int? tipDokumentaFilter,
-    DateTime? fromDate,
-    DateTime? toDate)
+            string sortOrder,
+            int? tipDokumentaFilter,
+            DateTime? fromDate,
+            DateTime? toDate)
         {
             // Dobavi ID trenutno ulogovanog korisnika
             var korisnikId = _userManager.GetUserId(User);
             if (korisnikId == null)
-                return NotFound("Korisnik nije pronaðen.");
+                return NotFound("Korisnik nije pronaÄ‘en.");
 
             DateTime godinaUnazad = DateTime.Now.AddYears(-1);
 
@@ -94,8 +94,6 @@ namespace eOpcina.Controllers
 
             return View("PrikaziHistorijuZahtjeva", zahtjevi);
         }
-
-
 
         public IActionResult Index()
         {

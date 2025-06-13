@@ -16,6 +16,8 @@ namespace eOpcina.Models
         [Display(Name = "Upis u obrazovnu ustanovu")]
         UpisUObrazovnuUstanovu,
         [Display(Name = "Ostvarivanje dječijeg doplatka")]
-        OstvarivanjeDjecijegDoplatka
+        OstvarivanjeDjecijegDoplatka,
+        [Display(Name = "Izgubljen dokument")]
+        IzgubljenDokument
     }
 }

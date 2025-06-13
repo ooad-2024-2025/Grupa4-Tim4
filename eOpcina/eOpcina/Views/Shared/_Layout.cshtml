@@ -39,7 +39,7 @@
 
 
                                     <li><a class="dropdown-item" asp-area="" asp-controller="Korisnik" asp-action="Dodaj">Dodaj korisnika</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Korisnik" asp-action="Uredi" asp-route-id="4">Uredi korisnika</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Korisnik" asp-action="Pretrazi" asp-route-id="4">Uredi korisnika</a></li>
                                     <li><a class="dropdown-item" asp-area="" asp-controller="Sablon" asp-action="Index">Uredi šablone</a></li>
 
 
@@ -80,14 +80,14 @@
                         <ul class="list-unstyled">
                             <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Profil">Profil</a></li>
                             <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Zahtjev" asp-action="Index">Pošalji zahtjev</a></li>
-                            <li><a style="color: #9DB2BF; text-decoration: none;" href="#">Historija zahtjeva</a></li>
+                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="PrikaziHistorijuZahtjeva">Historija zahtjeva</a></li>
                         </ul>
                     </div>
 
                     <div class="col-md-3">
                         <h5 class="mb-3 text-white">Općenito</h5>
                         <ul class="list-unstyled">
-                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Register">Početna</a></li>
+                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Index">Početna</a></li>
                             <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Register">Registracija</a></li>
                             <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Privacy">Privatnost</a></li>
                         </ul>

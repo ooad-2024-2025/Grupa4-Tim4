@@ -1,32 +1,126 @@
 ﻿@model IEnumerable<eOpcina.Models.Zahtjev>
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
 
 @{
     ViewData["Title"] = "Historija Zahtjeva";
+
+    string GetDisplayName(Enum enumValue)
+    {
+        var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
+        if (member != null)
+        {
+            var displayAttr = member.GetCustomAttribute<DisplayAttribute>();
+            if (displayAttr != null)
+            {
+                return displayAttr.GetName();
+            }
+        }
+        return enumValue.ToString();
+    }
 }
 
-<h2>Historija Zahtjeva</h2>
+<style>
+    .custom-table-container {
+        margin: 60px auto 60px auto;
+        max-width: 80%;
+    }
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Datum Slanja</th>
-            <th>Korisnik</th>
-            <th>Dokument</th>
-            <th>Razlog</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    .custom-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .custom-table thead th {
+        background-color: #393E46 !important;
+        color: whitesmoke !important;
+        text-align: center;
+    }
+
+    .custom-table td, .custom-table th {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .filter-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .filter-row {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .dropdown .dropdown-menu {
+        min-width: 200px;
+    }
+
+    .dropdown-menu .dropdown-menu {
+        margin-left: 0.2rem;
+        margin-top: -0.5rem;
+    }
+
+
+    .page-header {
+        margin-top: 80px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+</style>
+    
+<h2 class="page-header">Historija Zahtjeva</h2>
+
+<div class="custom-table-container">
+    <div class="filter-row">
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/images/filter-icon.png" alt="Filter" style="height: 40px;" />
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                <li><a class="dropdown-item active" href="#">Poredaj najranije</a></li>
+                <li><a class="dropdown-item" href="#">Poredaj najstarije</a></li>
+                <li>
+                    <div class="dropdown dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="tipDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Izaberi tip
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tipDropdown">
+                            <li><a class="dropdown-item" href="#">Svi</a></li>
+                            <li><a class="dropdown-item" href="#">Rodni list</a></li>
+                            <li><a class="dropdown-item" href="#">Državljanstvo</a></li>
+                            <li><a class="dropdown-item" href="#">Vjenčani list</a></li>
+                            <li><a class="dropdown-item" href="#">Smrtni list</a></li>
+                            <li><a class="dropdown-item" href="#">Uvjerenje o prebivalištu</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <table class="table table-striped custom-table">
+        <thead>
             <tr>
-                <td>@item.Id</td>
-                <td>@item.DatumSlanja.ToString("dd.MM.yyyy")</td>
-                <td>@(item.Korisnik != null ? item.Korisnik.Ime + " " + item.Korisnik.Prezime : "N/A")</td>
-                <td>@(item.Dokument != null ? item.Dokument.Id.ToString() : "N/A")</td>
-                <td>@item.RazlogZahtjeva</td>
+                <th>Datum</th>
+                <th>Dokument</th>
+                <th>Razlog zahtjeva</th>
             </tr>
-        }
-    </tbody>
-</table>
-
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var tip = item.Dokument?.Sablon?.TipDokumenta;
+                <tr style="font-weight:500">
+                    <td>@item.DatumSlanja.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@(tip != null ? GetDisplayName(tip) : "N/A")</td>
+                    <td>@GetDisplayName(item.RazlogZahtjeva)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

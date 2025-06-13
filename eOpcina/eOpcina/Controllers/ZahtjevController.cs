@@ -285,7 +285,7 @@ namespace eOpcina.Controllers
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
             byte[] sablonPDF = sablon.PDFSablona;*/
-            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\ETF\TreciSemestar\ASP\Zadaće\ASPZadaca1.pdf");
+            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\Harun\ugovor_o_ucenju.pdf");
             var datumIzdavanja = DateTime.Now;
 
             /*
