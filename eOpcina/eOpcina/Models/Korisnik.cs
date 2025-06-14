@@ -21,6 +21,9 @@ namespace eOpcina.Models
         public Spol Spol { get; set; }
         [Required(ErrorMessage = "Polje Adresa prebivališta je obavezno!")]
         public string AdresaPrebivalista { get; set; }
+
+        public bool Zakljucan { get; set; } = false; // Novo polje
+
         public Korisnik() { }
     }
 }

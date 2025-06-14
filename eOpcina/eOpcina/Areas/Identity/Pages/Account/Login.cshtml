@@ -3,7 +3,6 @@
 
 @{
     ViewData["Title"] = "Prijava";
-    //Layout = null; // optional: use if you want a completely minimal layout with no nav/header/footer
 }
 
 <!DOCTYPE html>
@@ -62,9 +61,14 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" placeholder="Lozinka" />
+                    <input asp-for="Input.Password" type="password" class="form-control" autocomplete="current-password" placeholder="Lozinka" />
                     <label asp-for="Input.Password">Lozinka</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input asp-for="Input.RememberMe" class="form-check-input" />
+                    <label asp-for="Input.RememberMe" class="form-check-label">Zapamti me</label>
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100">Prijava</button>

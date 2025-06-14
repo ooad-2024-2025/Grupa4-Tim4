@@ -111,7 +111,7 @@ namespace eOpcina.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // Find user by JMBG instead of email
+                // Pronađi korisnika po JMBG
                 var user = await _userManager.Users.FirstOrDefaultAsync(u => u.JMBG == Input.JMBG);
                 if (user == null)
                 {
@@ -119,34 +119,45 @@ namespace eOpcina.Areas.Identity.Pages.Account
                     return Page();
                 }
 
-                // Try signing in with username
-                /*var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, false, lockoutOnFailure: false);
+                // Provjera da li je ručno zaključan od strane admina
+                if (user.Zakljucan)
+                {
+                    ModelState.AddModelError(string.Empty, "Vaš korisnički nalog je zaključan. Molimo kontaktirajte administratora.");
+                    return Page();
+                }
+
+                // Login sa automatskom ASP.NET lockout podrškom
+                var result = await _signInManager.PasswordSignInAsync(
+                    user.UserName,
+                    Input.Password,
+                    Input.RememberMe,
+                    lockoutOnFailure: true
+                );
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
+
                 if (result.RequiresTwoFactor)
                 {
                     return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
                 }
+
                 if (result.IsLockedOut)
                 {
                     _logger.LogWarning("User account locked out.");
                     return RedirectToPage("./Lockout");
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Neispravan JMBG ili lozinka.");
-                    return Page();
-                }*/
 
-                await _signInManager.SignInAsync(user, isPersistent: false);
+                ModelState.AddModelError(string.Empty, "Neispravan JMBG ili lozinka.");
+                return Page();
             }
 
-            // If we got this far, something failed, redisplay form
+            // Nešto nije prošlo u validaciji forme
             return Page();
         }
+    }
 
     }
-}

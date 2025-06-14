@@ -3,7 +3,9 @@ using eOpcina.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace eOpcina.Controllers
@@ -35,25 +37,42 @@ namespace eOpcina.Controllers
             {
                 foreach (var k in korisnici)
                 {
-                    // Možeš dodatno provjeriti postoji li korisnik u bazi prije update-a
-                    var korisnikUBazi = await _context.Korisnik.FindAsync(k.Id);
+                    var korisnikUBazi = await _userManager.FindByIdAsync(k.Id);
                     if (korisnikUBazi != null)
                     {
-                        // Update relevantnih polja, nemoj direktno update-ati cijeli objekt zbog tracking-a
                         korisnikUBazi.Ime = k.Ime;
                         korisnikUBazi.Prezime = k.Prezime;
                         korisnikUBazi.Email = k.Email;
-                        korisnikUBazi.JMBG = k.JMBG;
                         korisnikUBazi.UserName = k.UserName;
-                        // Dodaj ostala polja ako treba
+                        korisnikUBazi.JMBG = k.JMBG;
+
+                        // Sinhronizacija zaključavanja korisnika sa Identity lockout-om
+                        korisnikUBazi.Zakljucan = k.Zakljucan;
+                        if (k.Zakljucan)
+                        {
+                            korisnikUBazi.LockoutEnabled = true;
+                            korisnikUBazi.LockoutEnd = DateTimeOffset.MaxValue; // zaključaj do daljnjeg
+                        }
+                        else
+                        {
+                            korisnikUBazi.LockoutEnd = null; // otključaj
+                        }
+
+                        var updateResult = await _userManager.UpdateAsync(korisnikUBazi);
+                        if (!updateResult.Succeeded)
+                        {
+                            foreach (var error in updateResult.Errors)
+                            {
+                                ModelState.AddModelError("", error.Description);
+                            }
+                            return View("Index", korisnici);
+                        }
                     }
                 }
 
-                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
 
-            // Ako model nije validan, vrati listu korisnika da se može ponovo urediti
             return View("Index", korisnici);
         }
 
@@ -81,71 +100,22 @@ namespace eOpcina.Controllers
             return View(korisnik);
         }
 
-
-
-        /*
-        // GET: Korisnik/Uredi
-        public async Task<IActionResult> Uredi()
-        {
-            var korisnici = await _userManager.Users.ToListAsync();
-            return View(korisnici);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Uredi(List<Korisnik> korisnici)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(korisnici);
-            }
-
-            foreach (var korisnik in korisnici)
-            {
-                var existingUser = await _userManager.FindByIdAsync(korisnik.Id);
-                if (existingUser != null)
-                {
-                    existingUser.Ime = korisnik.Ime;
-                    existingUser.Prezime = korisnik.Prezime;
-                    existingUser.Email = korisnik.Email;
-                    existingUser.JMBG = korisnik.JMBG;
-                    // Ostala polja ako treba
-
-                    var result = await _userManager.UpdateAsync(existingUser);
-                    if (!result.Succeeded)
-                    {
-                        foreach (var error in result.Errors)
-                        {
-                            ModelState.AddModelError("", error.Description);
-                        }
-                        return View(korisnici);
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Korisnik nije pronađen.");
-                    return View(korisnici);
-                }
-            }
-
-            return RedirectToAction(nameof(Index));
-        }
-        */
-
+        // GET: Korisnik/Uredi/5
         public async Task<IActionResult> Uredi(string id)
         {
             var korisnik = await _userManager.FindByIdAsync(id);
             if (korisnik == null)
                 return NotFound();
 
-            return View("Uredi", korisnik); // explicitly point to the right view
+            return View("Uredi", korisnik);
         }
 
+        // POST: Korisnik/Uredi
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Uredi(Korisnik korisnik)
         {
-            if (!ModelState.IsValid)    
+            if (!ModelState.IsValid)
             {
                 return View(korisnik);
             }
@@ -159,12 +129,26 @@ namespace eOpcina.Controllers
             existing.Ime = korisnik.Ime;
             existing.Prezime = korisnik.Prezime;
             existing.Email = korisnik.Email;
+            existing.UserName = korisnik.UserName;
             existing.JMBG = korisnik.JMBG;
             existing.BrojLicneKarte = korisnik.BrojLicneKarte;
             existing.AdresaPrebivalista = korisnik.AdresaPrebivalista;
             existing.RokTrajanjaLicneKarte = korisnik.RokTrajanjaLicneKarte;
             existing.ElektronskiPotpis = korisnik.ElektronskiPotpis;
             existing.Spol = korisnik.Spol;
+            existing.EmailConfirmed = true;
+
+            // Sinhronizacija zaključavanja korisnika sa Identity lockout-om
+            existing.Zakljucan = korisnik.Zakljucan;
+            if (korisnik.Zakljucan)
+            {
+                existing.LockoutEnabled = true;
+                existing.LockoutEnd = DateTimeOffset.MaxValue; // zaključaj do daljnjeg
+            }
+            else
+            {
+                existing.LockoutEnd = null; // otključaj
+            }
 
             var result = await _userManager.UpdateAsync(existing);
             if (!result.Succeeded)
@@ -195,8 +179,7 @@ namespace eOpcina.Controllers
                 .Where(k => (k.Ime + " " + k.Prezime).ToLower().Contains(query.ToLower()))
                 .ToListAsync();
 
-            return View("Pretrazi", users); // Pass users to the same view
+            return View("Pretrazi", users);
         }
-
     }
 }

@@ -73,6 +73,12 @@
         <span asp-validation-for="Spol" class="text-danger"></span>
     </div>
 
+    <!-- DODATO polje za Zakljucan -->
+    <div class="form-group form-check" style="margin-top: 15px;">
+        <input asp-for="Zakljucan" class="form-check-input" type="checkbox" id="Zakljucan" />
+        <label class="form-check-label" for="Zakljucan">Zaključan (blokiran login)</label>
+    </div>
+
     <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Sačuvaj promjene</button>
     <a asp-action="Pretrazi" class="btn btn-secondary" style="margin-top: 40px;">Odustani</a>
 </form>
