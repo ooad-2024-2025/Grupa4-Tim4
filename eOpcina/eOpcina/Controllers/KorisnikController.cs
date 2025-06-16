@@ -83,22 +83,32 @@ namespace eOpcina.Controllers
             return View();
         }
 
-        // POST: Korisnik/Dodaj
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Dodaj(Korisnik korisnik)
+        public async Task<IActionResult> Dodaj(Korisnik korisnik, string Password)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(korisnik);
-                await _context.SaveChangesAsync();
+                // Postavi UserName na JMBG prije spremanja korisnika
+                korisnik.UserName = korisnik.JMBG;
 
-                TempData["SuccessMessage"] = $"Uspješno je dodan Korisnik {korisnik.Ime} {korisnik.Prezime} sa JMBG {korisnik.JMBG}";
-                return RedirectToAction("Dodaj");
+                var result = await _userManager.CreateAsync(korisnik, Password);
+                if (result.Succeeded)
+                {
+                    TempData["SuccessMessage"] = $"Uspješno je dodan Korisnik {korisnik.Ime} {korisnik.Prezime} sa JMBG {korisnik.JMBG}";
+                    return RedirectToAction("Dodaj");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
             }
 
             return View(korisnik);
         }
+
+
 
         // GET: Korisnik/Uredi/5
         public async Task<IActionResult> Uredi(string id)

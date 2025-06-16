@@ -10,7 +10,6 @@
     </div>
 }
 
-
 @section Scripts {
     <script>
         function togglePasswordVisibility() {
@@ -18,17 +17,16 @@
             const eyeIcon = document.getElementById("eyeIcon");
             if (pwdInput.type === "password") {
                 pwdInput.type = "text";
-                eyeIcon.src = "/images/eye-off.png"; // placeholder
+                eyeIcon.src = "/images/eye-off.png";
             } else {
                 pwdInput.type = "password";
-                eyeIcon.src = "/images/eye.png"; // placeholder
+                eyeIcon.src = "/images/eye.png";
             }
         }
     </script>
 
     @Html.Partial("_ValidationScriptsPartial")
 }
-
 
 <style>
     .form-wrapper {
@@ -79,17 +77,29 @@
         position: relative;
     }
 
-    .password-toggle img {
-        position: absolute;
-        right: 20px;
-        top: 40px;
-        height: 20px;
-        cursor: pointer;
-    }
+        .password-toggle img {
+            position: absolute;
+            right: 20px;
+            top: 40px;
+            height: 20px;
+            cursor: pointer;
+        }
 </style>
 
 <div class="form-wrapper">
     <h2 class="text-center">Dodaj korisnika</h2>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            <ul>
+                @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <li>@modelError.ErrorMessage</li>
+                }
+            </ul>
+        </div>
+    }
+
     <form asp-action="Dodaj" method="post">
         <div class="form-group">
             <label>Ime:</label>
@@ -108,7 +118,7 @@
         </div>
         <div class="form-group password-toggle">
             <label>Lozinka:</label>
-            <input id="passwordField" name="password" type="password" required />
+            <input id="passwordField" name="Password" type="password" required />
             <img src="/images/eye.png" id="eyeIcon" onclick="togglePasswordVisibility()" />
         </div>
         <div class="form-group">
@@ -143,6 +153,8 @@
             <input asp-for="AdresaPrebivalista" />
             <span asp-validation-for="AdresaPrebivalista" class="validation-message"></span>
         </div>
+
+
         <button type="submit" class="submit-btn">Dodaj korisnika</button>
     </form>
 </div>
