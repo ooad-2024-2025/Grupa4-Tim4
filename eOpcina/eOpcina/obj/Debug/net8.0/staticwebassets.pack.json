@@ -1,299 +1,299 @@
 {
   "Files": [
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\eOpcina.bundle.scp.css",
-      "PackagePath": "staticwebassets\\eOpcina.i577glpubt.bundle.scp.css"
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\eOpcina.bundle.scp.css",
+      "PackagePath": "staticwebassets\\eOpcina.bundle.scp.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\css\\site.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\favicon.ico",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina-logo-bw.jpg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina-logo-bw.jpg",
       "PackagePath": "staticwebassets\\images\\eopcina-logo-bw.jpg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina_logo_bw.png",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\eopcina_logo_bw.png",
       "PackagePath": "staticwebassets\\images\\eopcina_logo_bw.png"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eye-off.png",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\eye-off.png",
       "PackagePath": "staticwebassets\\images\\eye-off.png"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\eye.png",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\eye.png",
       "PackagePath": "staticwebassets\\images\\eye.png"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\filter-icon.png",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\filter-icon.png",
       "PackagePath": "staticwebassets\\images\\filter-icon.png"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-clock.svg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-clock.svg",
       "PackagePath": "staticwebassets\\images\\icons8-clock.svg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-document.svg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-document.svg",
       "PackagePath": "staticwebassets\\images\\icons8-document.svg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-shield-64.png",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\icons8-shield-64.png",
       "PackagePath": "staticwebassets\\images\\icons8-shield-64.png"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\iddeea-logo.png",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\iddeea-logo.png",
       "PackagePath": "staticwebassets\\images\\iddeea-logo.png"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina.jpg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\opcina.jpg",
       "PackagePath": "staticwebassets\\images\\opcina.jpg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina1.jpg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\opcina1.jpg",
       "PackagePath": "staticwebassets\\images\\opcina1.jpg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina2.jpg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\opcina2.jpg",
       "PackagePath": "staticwebassets\\images\\opcina2.jpg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\images\\opcina3.jpg",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\images\\opcina3.jpg",
       "PackagePath": "staticwebassets\\images\\opcina3.jpg"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\js\\site.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
@@ -307,10 +307,6 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.eOpcina.props",
       "PackagePath": "buildTransitive\\eOpcina.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.eOpcina.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.eOpcina.Microsoft.AspNetCore.StaticWebAssets.props",

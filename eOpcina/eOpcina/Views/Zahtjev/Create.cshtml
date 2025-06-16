@@ -35,41 +35,54 @@
 
 <h4>Zahtjev</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@if(User.IsInRole("Korisnik"))
+{
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="TipDokumenta" class="control-label"></label>
-                <select asp-for="TipDokumenta" class="form-control">
-                    @foreach (var item in tipoviDokumenta)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
-                </select>
-            </div>
+                <div class="form-group">
+                    <label asp-for="TipDokumenta" class="control-label"></label>
+                    <select asp-for="TipDokumenta" class="form-control">
+                        @foreach (var item in tipoviDokumenta)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="RazlogZahtjeva" class="control-label"></label>
-                <select asp-for="RazlogZahtjeva" class="form-control">
-                    @foreach (var item in razlogOpcije)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
-                </select>
-            </div>
+                <div class="form-group">
+                    <label asp-for="RazlogZahtjeva" class="control-label"></label>
+                    <select asp-for="RazlogZahtjeva" class="form-control">
+                        @foreach (var item in razlogOpcije)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="NacinPreuzimanja" value="PrekoMaila" />
+                    <label class="form-check-label">Preuzimam dokument putem maila</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="NacinPreuzimanja" value="UOpcini" />
+                    <label class="form-check-label">Preuzimam dokument u općini</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+}
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -103,7 +103,11 @@ namespace eOpcina.Areas.Identity.Pages.Account
                     return Page();
                 }
 
+<<<<<<< HEAD
                 // Login - koristi UserName za PasswordSignInAsync
+=======
+                /*// Login sa automatskom ASP.NET lockout podrškom
+>>>>>>> bb01b9e19fefee7cb7aa6d5751b1a46a7ee48d65
                 var result = await _signInManager.PasswordSignInAsync(
                     user.UserName,
                     Input.Password,
@@ -133,6 +137,7 @@ namespace eOpcina.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, "Neispravan JMBG ili lozinka.");
                     return Page();
                 }
+<<<<<<< HEAD
             }
             else
             {
@@ -140,6 +145,13 @@ namespace eOpcina.Areas.Identity.Pages.Account
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
                 string sveGreske = string.Join("; ", errors);
                 _logger.LogWarning("Validacija forme nije prošla. Greške: {Errors}", sveGreske);
+=======
+
+                ModelState.AddModelError(string.Empty, "Neispravan JMBG ili lozinka.");
+                return Page();*/
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return LocalRedirect(returnUrl);
+>>>>>>> bb01b9e19fefee7cb7aa6d5751b1a46a7ee48d65
             }
 
             // Validacija nije prošla
