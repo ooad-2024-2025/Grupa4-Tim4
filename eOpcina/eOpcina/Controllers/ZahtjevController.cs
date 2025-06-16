@@ -18,9 +18,11 @@ using eOpcina.ViewModels;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace eOpcina.Controllers
 {
+    [Authorize]
     public class ZahtjevController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -31,9 +33,10 @@ namespace eOpcina.Controllers
         {
             _context = context;
             _userManager = userManager;
-        }   
+        }
 
         // GET: Zahtjev
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Zahtjev.Include(z => z.Dokument).Include(z => z.Korisnik);
@@ -41,6 +44,7 @@ namespace eOpcina.Controllers
         }
 
         // GET: Zahtjev/Details/5
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -61,6 +65,7 @@ namespace eOpcina.Controllers
         }
 
         // GET: Zahtjev/Create
+        [Authorize(Roles = "Korisnik")]
         public IActionResult Create()
         {
             ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
@@ -83,6 +88,7 @@ namespace eOpcina.Controllers
         }
 
         // POST: Zahtjev/Create
+        [Authorize(Roles = "Korisnik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ZahtjevCreateViewModel viewModel)
@@ -117,11 +123,13 @@ namespace eOpcina.Controllers
                 return View(viewModel);
             }
             var idKorisnika = _userManager.GetUserId(User);
-            await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva);
+            await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva, viewModel.NacinPreuzimanja);
 
             return RedirectToAction(nameof(Index));
         }
 
+        // ZASAD SAM STAVIO DA NIKO NE MOŽE EDITOVATI ZAHTJEVE JER KONTAM NEMA POTREBE
+        /*
         // GET: Zahtjev/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -176,8 +184,10 @@ namespace eOpcina.Controllers
             ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
             return View(zahtjev);
         }
+        */
 
         // GET: Zahtjev/Delete/5
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -198,6 +208,7 @@ namespace eOpcina.Controllers
         }
 
         // POST: Zahtjev/Delete/5
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -206,6 +217,7 @@ namespace eOpcina.Controllers
             if (zahtjev != null)
             {
                 _context.Zahtjev.Remove(zahtjev);
+                _context.Dokument.Remove(zahtjev.Dokument); // Također brišemo dokument vezan uz zahtjev
             }
 
             await _context.SaveChangesAsync();
@@ -262,7 +274,8 @@ namespace eOpcina.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> ObradiZahtjev(string idKorisnika, TipDokumenta tipDokumenta, Razlog razlog)
+        public async Task<IActionResult> 
+            ObradiZahtjev(string idKorisnika, TipDokumenta tipDokumenta, Razlog razlog, NacinPreuzimanja? nacinPreuzimanja)
         {
             if (!Enum.IsDefined(typeof(TipDokumenta), tipDokumenta) || !Enum.IsDefined(typeof(Razlog), razlog))
                 return BadRequest("Nevažeći tip dokumenta ili razlog zahtjeva.");
@@ -285,7 +298,7 @@ namespace eOpcina.Controllers
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
             byte[] sablonPDF = sablon.PDFSablona;*/
-            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\Harun\ugovor_o_ucenju.pdf");
+            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\ETF\CetvrtiSemestar\US\UputaZaIzvjestaj.pdf");
             var datumIzdavanja = DateTime.Now;
 
             /*
@@ -334,13 +347,28 @@ namespace eOpcina.Controllers
                         .GetMember(tipDokumenta.ToString())
                         .First()
                         .GetCustomAttribute<DisplayAttribute>()?.Name ?? tipDokumenta.ToString();
-            await PosaljiPDFEmail(
-                emailKorisnika: korisnik.Email,
-                pdfBytes: popunjeniPDF,
-                subject: "Dokument je spreman",
-                body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumentaNormalized} za zahtjev poslan " +
-                      $"{datumSlanja}.\nS poštovanjem,\neOpcina Team"
-                );
+
+            if (nacinPreuzimanja == null)
+            {
+                // Jedna od dvije opcije mora biti odabrana
+                ModelState.AddModelError("NacinPreuzimanja", "Molimo odaberite način preuzimanja dokumenta.");
+            }
+            else if (nacinPreuzimanja == NacinPreuzimanja.PrekoMaila)
+            {
+                // Korisnik će primiti dokument putem emaila
+                await PosaljiPDFEmail(
+                    emailKorisnika: korisnik.Email,
+                    pdfBytes: popunjeniPDF,
+                    subject: "Dokument je spreman",
+                    body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumentaNormalized} za zahtjev poslan " +
+                          $"{datumSlanja}.\nS poštovanjem,\neOpcina Team"
+                    );
+            }
+            else
+            {
+                // Korisnik će preuzeti dokument u općini
+                ViewBag.Message = $"Dokument {tipDokumentaNormalized} je spreman za preuzimanje u općini. Molimo posjetite lokalnu općinu da preuzmete dokument.";
+            }
 
             return View();
         }

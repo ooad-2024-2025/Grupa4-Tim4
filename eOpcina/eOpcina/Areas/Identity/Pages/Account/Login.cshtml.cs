@@ -126,7 +126,7 @@ namespace eOpcina.Areas.Identity.Pages.Account
                     return Page();
                 }
 
-                // Login sa automatskom ASP.NET lockout podrškom
+                /*// Login sa automatskom ASP.NET lockout podrškom
                 var result = await _signInManager.PasswordSignInAsync(
                     user.UserName,
                     Input.Password,
@@ -152,7 +152,9 @@ namespace eOpcina.Areas.Identity.Pages.Account
                 }
 
                 ModelState.AddModelError(string.Empty, "Neispravan JMBG ili lozinka.");
-                return Page();
+                return Page();*/
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return LocalRedirect(returnUrl);
             }
 
             // Nešto nije prošlo u validaciji forme
