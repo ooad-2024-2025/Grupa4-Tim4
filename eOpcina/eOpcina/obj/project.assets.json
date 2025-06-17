@@ -11808,24 +11808,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Harun\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\eOpcina.csproj",
+      "projectUniqueName": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\eOpcina.csproj",
       "projectName": "eOpcina",
-      "projectPath": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\eOpcina.csproj",
-      "packagesPath": "C:\\Users\\Harun\\.nuget\\packages\\",
-      "outputPath": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\obj\\",
+      "projectPath": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\eOpcina.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\ETF\\CetvrtiSemestar\\OOAD\\eOpcina\\eOpcina\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11850,8 +11845,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -11911,7 +11905,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
