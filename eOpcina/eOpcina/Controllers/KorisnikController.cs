@@ -8,8 +8,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
-using System.Diagnostics; // Obavezno dodaj na vrh fajla
+
 namespace eOpcina.Controllers
 {
     public class KorisnikController : Controller
@@ -24,6 +25,7 @@ namespace eOpcina.Controllers
         }
 
         // GET: Korisnik/Index
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Index()
         {
             var korisnici = await _userManager.Users.ToListAsync();
@@ -33,6 +35,7 @@ namespace eOpcina.Controllers
         // POST: Korisnik/SnimiSve
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> SnimiSve(List<Korisnik> korisnici)
         {
             if (ModelState.IsValid)
@@ -80,6 +83,7 @@ namespace eOpcina.Controllers
 
 
         // GET: Korisnik/Dodaj
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public IActionResult Dodaj()
         {
             return View();
@@ -87,6 +91,7 @@ namespace eOpcina.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Dodaj(Korisnik korisnik, string Password)
         {
             // Ako neki od uslova nije zadovoljen, vrati View
@@ -118,9 +123,8 @@ namespace eOpcina.Controllers
         }
 
 
-
-
         // GET: Korisnik/Uredi/5 
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Uredi(string id)
         {
             Debug.WriteLine($"[DEBUG] Pozvan GET Uredi sa id = {id}");
@@ -141,6 +145,7 @@ namespace eOpcina.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Uredi(Korisnik korisnik)
         {
             Debug.WriteLine("[DEBUG] Pozvan POST Uredi.");
@@ -238,9 +243,8 @@ namespace eOpcina.Controllers
             return View(korisnik);
         }
 
-
-
         // GET: Korisnik/Pretrazi
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public IActionResult Pretrazi()
         {
             return View();
@@ -248,6 +252,7 @@ namespace eOpcina.Controllers
 
         // POST: Korisnik/Pretrazi
         [HttpPost]
+        [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Pretrazi(string query)
         {
             var users = await _userManager.Users
@@ -256,7 +261,6 @@ namespace eOpcina.Controllers
 
             return View("Pretrazi", users);
         }
-
 
         private bool ProvjeriUslove(Korisnik korisnik, string Password = "DefaultLozinka1")
         {
@@ -282,7 +286,7 @@ namespace eOpcina.Controllers
             }
 
             // Password mora biti između 6 i 30 znakova, mora imati barem jednu cifru, jedno veliko slovo i jedno malo slovo
-            if (Password.Length < 6 || Password.Length > 30 || 
+            if (Password.Length < 6 || Password.Length > 18  || 
                 !Password.Any(char.IsDigit) || !Password.Any(char.IsUpper) || !Password.Any(char.IsLower))
             {
                 ModelState.AddModelError("Password", "Lozinka mora biti između 6 i 18 znakova, i mora sadržavati barem jednu cifru, jedno veliko slovo i jedno malo slovo.");

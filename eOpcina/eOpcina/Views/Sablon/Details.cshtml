@@ -1,13 +1,12 @@
 ﻿@model eOpcina.Models.Sablon
 
 @{
-    ViewData["Title"] = "Sablon Details";
+    ViewData["Title"] = "Šablon detalji";
 }
 
-<h1>Sablon Details</h1>
+<h1>Detalji šablona</h1>
 
 <div>
-    <h4>Sablon</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">Tip dokumenta</dt>
@@ -19,6 +18,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Uredi</a>
+    <a asp-action="Index" class="btn btn-secondary">Nazad na listu</a>
 </div>

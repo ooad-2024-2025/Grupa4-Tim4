@@ -4,17 +4,17 @@
     ViewData["Title"] = "Edit Sablon";
 }
 
-<h1>Edit Sablon</h1>
+<h1>Uredi šablon</h1>
 
 <form asp-action="Edit" enctype="multipart/form-data" method="post">
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
-        <label asp-for="TipDokumenta" class="control-label"></label>
+        <label asp-for="TipDokumenta" class="control-label">Tip dokumenta</label>
         <select asp-for="TipDokumenta" class="form-control" asp-items="ViewBag.TipoviDokumenata"></select>
         <span asp-validation-for="TipDokumenta" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label>Trenutni PDF Šablon:</label>
+    <div class="form-group" style="margin-top: 30px;">
+        <label>Trenutni PDF šablon:</label>
         @if (Model.PDFSablona != null && Model.PDFSablona.Length > 0)
         {
             <span class="badge bg-success">Postavljen</span>
@@ -24,13 +24,13 @@
             <span class="badge bg-danger">Nije postavljen</span>
         }
     </div>
-    <div class="form-group">
+    <div class="form-group" style="margin-top: 30px;">
         <label for="PDFSablona">Novi PDF Šablon (opcionalno)</label>
         <input type="file" name="pdfFile" class="form-control" accept="application/pdf" />
         <span asp-validation-for="PDFSablona" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <button type="submit" style="margin-top: 30px;" class="btn btn-primary">Sačuvaj</button>
+    <a asp-action="Index" style="margin-top: 30px;" class="btn btn-secondary">Nazad na listu</a>
 </form>
 
 @section Scripts {

@@ -65,7 +65,7 @@ namespace eOpcina.Controllers
         }
 
         // GET: Zahtjev/Create
-        [Authorize(Roles = "Korisnik,Zaposlenik")]
+        //[Authorize(Roles = "Korisnik,Zaposlenik")]
         public IActionResult Create()
         {
             ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
@@ -88,7 +88,7 @@ namespace eOpcina.Controllers
         }
 
         // POST: Zahtjev/Create
-        [Authorize(Roles = "Korisnik,Zaposlenik")]
+        //[Authorize(Roles = "Korisnik,Zaposlenik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ZahtjevCreateViewModel viewModel)

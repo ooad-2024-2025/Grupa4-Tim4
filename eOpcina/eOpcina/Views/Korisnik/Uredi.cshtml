@@ -80,8 +80,16 @@
 
     </div>
 
-    <p><strong>Trenutno Zaključan:</strong> @Model.Zakljucan</p>
-
+    <!--
+    @{
+        if (@Model.Zakljucan){
+            <p><strong>Korisnikov račun je trenutno zaključan.</strong</p>
+        }
+        else {
+            <p><strong>Korisnikov račun je trenutno otključan.</strong</p>
+        }
+    }
+    -->
     <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Sačuvaj promjene</button>
     <a asp-action="Pretrazi" class="btn btn-secondary" style="margin-top: 40px;">Odustani</a>
 </form>

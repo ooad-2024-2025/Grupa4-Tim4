@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using eOpcina.Data;
 using eOpcina.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace eOpcina.Controllers
 {
@@ -23,11 +24,13 @@ namespace eOpcina.Controllers
             _env = env;
         }
 
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Sablon.ToListAsync());
         }
 
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
@@ -37,7 +40,7 @@ namespace eOpcina.Controllers
 
             return View(sablon);
         }
-
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
@@ -51,6 +54,7 @@ namespace eOpcina.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TipDokumenta tipDokumenta, IFormFile pdfFile)
         {
@@ -83,7 +87,8 @@ namespace eOpcina.Controllers
                 });
             return View();
         }
-
+        
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -103,6 +108,7 @@ namespace eOpcina.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,TipDokumenta")] Sablon sablon, IFormFile? pdfFile)
         {
             if (id != sablon.Id) return NotFound();
@@ -150,6 +156,7 @@ namespace eOpcina.Controllers
             return View(sablon);
         }
 
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -162,6 +169,7 @@ namespace eOpcina.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var sablon = await _context.Sablon.FindAsync(id);
