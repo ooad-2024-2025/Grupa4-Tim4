@@ -5,6 +5,22 @@
     ViewData["Title"] = "Prijava";
 }
 
+@section Scripts {
+    <script>
+        function togglePasswordVisibility() {
+            const pwdInput = document.getElementById("passwordField");
+            const eyeIcon = document.getElementById("eyeIcon");
+            if (pwdInput.type === "password") {
+                pwdInput.type = "text";
+                eyeIcon.src = "/images/eye-off.png";
+            } else {
+                pwdInput.type = "password";
+                eyeIcon.src = "/images/eye.png";
+            }
+        }
+    </script>
+}
+
 <!DOCTYPE html>
 <html lang="bs">
 <head>
@@ -45,6 +61,19 @@
             text-align: center;
             margin-top: 1rem;
         }
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle img {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            height: 20px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -60,10 +89,13 @@
                     <span asp-validation-for="Input.JMBG" class="text-danger"></span>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" type="password" class="form-control" autocomplete="current-password" placeholder="Lozinka" />
+
+
+                <div class="form-floating mb-3 password-toggle">
+                    <input asp-for="Input.Password" id="passwordField" type="password" class="form-control" autocomplete="current-password" placeholder="Lozinka" />
                     <label asp-for="Input.Password">Lozinka</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    <img src="/images/eye.png" id="eyeIcon" alt="Prikaži lozinku" onclick="togglePasswordVisibility()" />
                 </div>
 
                 <div class="form-check mb-3">

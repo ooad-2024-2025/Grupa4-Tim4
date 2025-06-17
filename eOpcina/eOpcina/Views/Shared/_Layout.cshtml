@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand text-light ms-4" asp-area="" asp-controller="Home" asp-action="Index">eOpcina</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -26,41 +26,54 @@
                             <li class="nav-item">
                                 <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Početna</a>
                             </li>
-                         
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Zahtjev" asp-action="Index">Pošalji zahtjev</a>
-                            </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-light" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Administracija
-                                </a>
-                                <ul class="dropdown-menu admin-menu" aria-labelledby="adminDropdown">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                @* Only Korisnik and Zaposlenik roles should see "Pošalji zahtjev" *@
+                                if (User.IsInRole("Korisnik") || User.IsInRole("Zaposlenik"))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Zahtjev" asp-action="Create">Pošalji zahtjev</a>
+                                    </li>
+                                }
 
+                                if (User.IsInRole("Zaposlenik") || User.IsInRole("Administrator"))
+                                {
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle text-light" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Administracija
+                                        </a>
+                                        <ul class="dropdown-menu admin-menu" aria-labelledby="adminDropdown">
+                                            <li><a class="dropdown-item" asp-controller="Korisnik" asp-action="Dodaj">Dodaj korisnika</a></li>
+                                            <li><a class="dropdown-item" asp-controller="Korisnik" asp-action="Pretrazi" asp-route-id="4">Uredi korisnika</a></li>
 
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Korisnik" asp-action="Dodaj">Dodaj korisnika</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Korisnik" asp-action="Pretrazi" asp-route-id="4">Uredi korisnika</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Sablon" asp-action="Index">Uredi šablone</a></li>
+                                            @if (User.IsInRole("Administrator"))
+                                            {
+                                                <li><a class="dropdown-item" asp-controller="Sablon" asp-action="Index">Uredi šablone</a></li>
+                                            }
 
-
-                                </ul>
-
-                            </li>
+                                            <li><a class="dropdown-item" asp-controller="Zahtjev" asp-action="Index">Pregled zahtjeva</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                            }
                         </ul>
 
                         <ul class="navbar-nav align-items-center">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-controller="Home" asp-action="PrikaziHistorijuZahtjeva">Historija zahtjeva</a>
-
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-controller="Home" asp-action="Profil">Profil</a>
-
-                            </li>
+                            @if (User.IsInRole("Korisnik") || User.IsInRole("Zaposlenik") || User.IsInRole("Administrator"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-controller="Home" asp-action="PrikaziHistorijuZahtjeva">Historija zahtjeva</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-controller="Home" asp-action="Profil">Profil</a>
+                                </li>
+                            }
                         </ul>
 
                         <partial name="_LoginPartial" />
                     </div>
+
                 </div>
             </nav>
         </header>
@@ -75,17 +88,20 @@
         <footer class="footer-custom mt-4">
             <div class="container-fluid py-4 text-white">
                 <div class="row">
-                    <div class="col-md-3 ms-3">
-                        <h5 class="mb-3 text-white">Navigacija</h5>
-                        <ul class="list-unstyled">
-                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Profil">Profil</a></li>
-                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Zahtjev" asp-action="Index">Pošalji zahtjev</a></li>
-                            <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="PrikaziHistorijuZahtjeva">Historija zahtjeva</a></li>
-                        </ul>
-                    </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="col-md-3 ms-3">
+                            <h5 class="mb-3 text-white">Navigacija</h5>
+                            <ul class="list-unstyled">
+                                <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Profil">Profil</a></li>
+                                <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Zahtjev" asp-action="Index">Pošalji zahtjev</a></li>
+                                <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="PrikaziHistorijuZahtjeva">Historija zahtjeva</a></li>
+                            </ul>
+                        </div>
+                    }
 
                     <div class="col-md-3">
-                        <h5 class="mb-3 text-white">Općenito</h5>
+                        <h5 class="mb-4 text-white">Općenito</h5>
                         <ul class="list-unstyled">
                             <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Index">Početna</a></li>
                             <li><a style="color: #9DB2BF; text-decoration: none;" asp-controller="Home" asp-action="Register">Registracija</a></li>

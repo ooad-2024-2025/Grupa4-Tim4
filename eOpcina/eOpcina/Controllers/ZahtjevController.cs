@@ -65,7 +65,7 @@ namespace eOpcina.Controllers
         }
 
         // GET: Zahtjev/Create
-        [Authorize(Roles = "Korisnik")]
+        [Authorize(Roles = "Korisnik,Zaposlenik")]
         public IActionResult Create()
         {
             ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
@@ -88,7 +88,7 @@ namespace eOpcina.Controllers
         }
 
         // POST: Zahtjev/Create
-        [Authorize(Roles = "Korisnik")]
+        [Authorize(Roles = "Korisnik,Zaposlenik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ZahtjevCreateViewModel viewModel)
@@ -298,7 +298,7 @@ namespace eOpcina.Controllers
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
             byte[] sablonPDF = sablon.PDFSablona;*/
-            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\ETF\CetvrtiSemestar\US\UputaZaIzvjestaj.pdf");
+            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\temp.pdf");
             var datumIzdavanja = DateTime.Now;
 
             /*

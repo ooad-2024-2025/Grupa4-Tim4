@@ -1,17 +1,35 @@
 ﻿@model IEnumerable<eOpcina.Models.Zahtjev>
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Pregled zahtjeva";
+
+    string GetDisplayName(Enum enumValue)
+    {
+        var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
+        if (member != null)
+        {
+            var displayAttr = member.GetCustomAttribute<DisplayAttribute>();
+            if (displayAttr != null)
+            {
+                return displayAttr.GetName();
+            }
+        }
+        return enumValue.ToString();
+    }
 }
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>Pregled zahtjeva</title>
+</head>
 
 @if (User.IsInRole("Administrator") || User.IsInRole("Zaposlenik"))
 {
-    <h1>Index</h1>
+    <h1 style="margin:30px; margin-bottom:50px;">Pregled poslanih zahtjeva</h1>
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <table class="table">
+    <table class="table table-striped custom-table">
         <thead>
             <tr>
                 <th>
@@ -30,27 +48,23 @@
             </tr>
         </thead>
         <tbody>
-    @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DatumSlanja)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RazlogZahtjeva)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Korisnik.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dokument.Id)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-    }
+            @foreach (var item in Model)
+            {
+                var korisnikDisplay = $"{item.Korisnik.Ime} {item.Korisnik.Prezime} - JMBG: {item.Korisnik.JMBG}";
+                var tip = item.Dokument?.Sablon?.TipDokumenta;
+                var tipDisplay = tip != null ? GetDisplayName(tip) : "N/A";
+
+                <tr>
+                    <td>@item.DatumSlanja.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@GetDisplayName(item.RazlogZahtjeva)</td>
+                    <td>@korisnikDisplay</td>
+                    <td>@tipDisplay</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+            }
         </tbody>
+
     </table>
 }

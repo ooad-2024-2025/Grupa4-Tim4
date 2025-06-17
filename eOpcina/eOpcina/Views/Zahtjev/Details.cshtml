@@ -1,45 +1,66 @@
 ﻿@model eOpcina.Models.Zahtjev
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
 
-@{
-    ViewData["Title"] = "Details";
+@functions {
+    string GetDisplayName(Enum enumValue)
+    {
+        var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
+        if (member != null)
+        {
+            var displayAttr = member.GetCustomAttribute<DisplayAttribute>();
+            if (displayAttr != null)
+            {
+                return displayAttr.GetName();
+            }
+        }
+        return enumValue.ToString();
+    }
 }
 
 @if (User.IsInRole("Administrator") || User.IsInRole("Zaposlenik"))
 {
-    <h1>Details</h1>
+    <h1 style="margin-top:50px;">Detalji zahtjeva</h1>
 
-    <div>
-        <h4>Zahtjev</h4>
+    <div style="background-color: #f0f0f0; padding: 30px; margin-top: 50px; margin-bottom: 50px; font-size: 20px; border-radius: 10px; width: 80%;">
         <hr />
-        <dl class="row">
-            <dt class = "col-sm-2">
+        <dl class="row" style="row-gap: 20px;">
+            <dt class="col-sm-3" style="white-space: nowrap;">
                 @Html.DisplayNameFor(model => model.DatumSlanja)
             </dt>
-            <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.DatumSlanja)
+            <dd class="col-sm-9">
+                @Model.DatumSlanja.ToString("dd.MM.yyyy HH:mm")
             </dd>
-            <dt class = "col-sm-2">
+
+            <dt class="col-sm-3" style="white-space: nowrap;">
                 @Html.DisplayNameFor(model => model.RazlogZahtjeva)
             </dt>
-            <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.RazlogZahtjeva)
+            <dd class="col-sm-9" style="white-space: nowrap;">
+                @GetDisplayName(Model.RazlogZahtjeva)
             </dd>
-            <dt class = "col-sm-2">
+
+            <dt class="col-sm-3" style="white-space: nowrap;">
                 @Html.DisplayNameFor(model => model.Korisnik)
             </dt>
-            <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.Korisnik.Id)
+            <dd class="col-sm-9">
+                @($"{Model.Korisnik.Ime} {Model.Korisnik.Prezime} JMBG: {Model.Korisnik.JMBG}")
             </dd>
-            <dt class = "col-sm-2">
+
+            <dt class="col-sm-3" style="white-space: nowrap;">
                 @Html.DisplayNameFor(model => model.Dokument)
             </dt>
-            <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.Dokument.Id)
+            <dd class="col-sm-9">
+                @{
+                    var tip = Model.Dokument?.Sablon?.TipDokumenta;
+                    var tipDisplay = tip != null ? GetDisplayName(tip) : "N/A";
+                }
+                @tipDisplay
             </dd>
         </dl>
     </div>
+
     <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-        <a asp-action="Index">Back to List</a>
+        <a style="margin-top:50px;" asp-action="Index">Back to List</a>
     </div>
 }
+

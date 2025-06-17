@@ -31,11 +31,11 @@
                 });
 }
 
-<h1>Create</h1>
+<h1>Pošalji zahtjev</h1>
 
-<h4>Zahtjev</h4>
+
 <hr />
-@if(User.IsInRole("Korisnik"))
+@if (User.IsInRole("Korisnik") || User.IsInRole("Zaposlenik"))
 {
     <div class="row">
         <div class="col-md-4">
