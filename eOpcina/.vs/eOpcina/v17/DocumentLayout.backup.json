@@ -7,20 +7,12 @@
       "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\zahtjev\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\harun\\etf\\iv sem\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\zahtjev\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\zahtjev\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\harun\\etf\\iv sem\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\tipdokumenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\tipdokumenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\harun\\etf\\iv sem\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\zahtjev\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\zahtjev\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\harun\\etf\\iv sem\\ooad\\grupa4-tim4\\eopcina\\eopcina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\harun\\etf\\iv sem\\ooad\\grupa4-tim4\\eopcina\\eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\controllers\\zahtjevcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|c:\\harun\\etf\\iv sem\\ooad\\grupa4-tim4\\eopcina\\eopcina\\models\\razlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E531B708-144E-4742-86F7-D20F5FEB19D3}|eOpcina\\eOpcina.csproj|solutionrelative:eopcina\\models\\razlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,28 +26,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "eOpcina\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "eOpcina\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-17T17:09:13.857Z",
+              "DocumentIndex": 2,
+              "Title": "Razlog.cs",
+              "DocumentMoniker": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Razlog.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\Razlog.cs",
+              "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\Razlog.cs",
+              "RelativeToolTip": "eOpcina\\Models\\Razlog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T20:07:04.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Zahtjev\\Index.cshtml",
-              "RelativeDocumentMoniker": "eOpcina\\Views\\Zahtjev\\Index.cshtml",
-              "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Zahtjev\\Index.cshtml",
-              "RelativeToolTip": "eOpcina\\Views\\Zahtjev\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADkAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-17T13:09:08.296Z",
+              "DocumentIndex": 1,
+              "Title": "TipDokumenta.cs",
+              "DocumentMoniker": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\TipDokumenta.cs",
+              "RelativeDocumentMoniker": "eOpcina\\Models\\TipDokumenta.cs",
+              "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Models\\TipDokumenta.cs",
+              "RelativeToolTip": "eOpcina\\Models\\TipDokumenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T20:05:50.334Z",
               "EditorCaption": ""
             },
             {
@@ -66,35 +58,9 @@
               "RelativeDocumentMoniker": "eOpcina\\Views\\Zahtjev\\Create.cshtml",
               "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Zahtjev\\Create.cshtml*",
               "RelativeToolTip": "eOpcina\\Views\\Zahtjev\\Create.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAqwGAAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-17T13:09:10.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Zahtjev\\Details.cshtml",
-              "RelativeDocumentMoniker": "eOpcina\\Views\\Zahtjev\\Details.cshtml",
-              "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Views\\Zahtjev\\Details.cshtml",
-              "RelativeToolTip": "eOpcina\\Views\\Zahtjev\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-17T13:09:09.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ZahtjevController.cs",
-              "DocumentMoniker": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs",
-              "RelativeDocumentMoniker": "eOpcina\\Controllers\\ZahtjevController.cs",
-              "ToolTip": "C:\\Harun\\ETF\\IV sem\\OOAD\\Grupa4-Tim4\\eOpcina\\eOpcina\\Controllers\\ZahtjevController.cs",
-              "RelativeToolTip": "eOpcina\\Controllers\\ZahtjevController.cs",
-              "ViewState": "AgIAAA8BAAAAAAAAAAAkwBwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:58:43.177Z",
               "EditorCaption": ""
             }
           ]

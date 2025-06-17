@@ -1,13 +1,11 @@
 ﻿@model eOpcina.ViewModels.ZahtjevCreateViewModel
 @using eOpcina.ViewModels
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
 
 @{
     ViewData["Title"] = "Create";
-}
 
-@using System.ComponentModel.DataAnnotations
-@using System.Reflection
-@{
     var razlogOpcije = Enum.GetValues(typeof(Razlog))
         .Cast<Razlog>()
         .Select(r => new SelectListItem
@@ -32,58 +30,190 @@
 }
 
 <h1>Pošalji zahtjev</h1>
-
-
 <hr />
+
 @if (User.IsInRole("Korisnik") || User.IsInRole("Zaposlenik"))
 {
     <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-md-6">
+            <form asp-action="Create" id="zahtjevForm">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label asp-for="TipDokumenta" class="control-label"></label>
-                    <select asp-for="TipDokumenta" class="form-control">
+                    <select asp-for="TipDokumenta" class="form-control" id="tipDokumenta" required>
+                        <option value="" selected hidden data-placeholder>-- Odaberite dokument --</option>
                         @foreach (var item in tipoviDokumenta)
                         {
                             <option value="@item.Value">@item.Text</option>
                         }
                     </select>
+                    <span asp-validation-for="TipDokumenta" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                     <label asp-for="RazlogZahtjeva" class="control-label"></label>
-                    <select asp-for="RazlogZahtjeva" class="form-control">
+                    <select asp-for="RazlogZahtjeva" class="form-control" id="razlogZahtjeva" required>
+                        <option value="" selected hidden data-placeholder>-- Odaberite svrhu --</option>
                         @foreach (var item in razlogOpcije)
                         {
                             <option value="@item.Value">@item.Text</option>
                         }
                     </select>
+                    <span asp-validation-for="RazlogZahtjeva" class="text-danger"></span>
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" asp-for="NacinPreuzimanja" value="PrekoMaila" />
-                    <label class="form-check-label">Preuzimam dokument putem maila</label>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" asp-for="NacinPreuzimanja" value="PrekoMaila" id="prekoMaila" />
+                    <label class="form-check-label" for="prekoMaila">Preuzimam dokument putem maila</label>
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" asp-for="NacinPreuzimanja" value="UOpcini" />
-                    <label class="form-check-label">Preuzimam dokument u općini</label>
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="radio" asp-for="NacinPreuzimanja" value="UOpcini" id="uOpcini" />
+                    <label class="form-check-label" for="uOpcini">Preuzimam dokument u općini</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <button type="button" class="btn btn-primary" onclick="confirmSubmission()">Pošalji zahtjev</button>
                 </div>
             </form>
         </div>
     </div>
-
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
 }
 
+<!-- Modal for confirmation -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Potvrda slanja</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+            </div>
+            <div class="modal-body" id="modalBodyText">
+                <!-- Filled by JS -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="submitForm()">Potvrdi</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odustani</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for errors -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="errorLabel">Greška</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+            </div>
+            <div class="modal-body" id="errorModalBody">
+                <!-- Filled by JS -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script>
+        const razlogEnumItems = @Html.Raw(Json.Serialize(
+            Enum.GetValues(typeof(Razlog))
+                .Cast<Razlog>()
+                .Select(r => new
+                {
+         value = (int)r,
+         text = r.GetType()
+                  .GetMember(r.ToString())
+                  .First()
+                  .GetCustomAttribute<DisplayAttribute>()?.Name ?? r.ToString()
+                })
+        ));
+
+        const razlogOptions = {
+            "0": [0,1,2,3,4,5],
+            "1": [0,1,2,3,4],
+            "2": [0,1,2,3,4,6],
+            "3": [7],
+            "4": [5]
+        };
+
+        function updateRazlogDropdown() {
+            const tipDokumenta = document.getElementById("tipDokumenta");
+            const razlogZahtjeva = document.getElementById("razlogZahtjeva");
+
+            const selectedTip = tipDokumenta.value;
+            const validRazlozi = razlogOptions[selectedTip] || [];
+
+            // Clear previous options
+            razlogZahtjeva.innerHTML = "";
+
+            // Add default disabled placeholder
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.text = "-- Odaberite svrhu --";
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            razlogZahtjeva.appendChild(defaultOption);
+
+            // Add new valid options
+            validRazlozi.forEach(value => {
+                const item = razlogEnumItems.find(r => r.value == value);
+                if (item) {
+                    const option = document.createElement("option");
+                    option.value = item.value;
+                    option.text = item.text;
+                    razlogZahtjeva.appendChild(option);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tipDokumenta = document.getElementById("tipDokumenta");
+            const razlogZahtjeva = document.getElementById("razlogZahtjeva");
+
+            // Set default selection
+            tipDokumenta.selectedIndex = 0;
+            razlogZahtjeva.innerHTML = '<option value="" selected disabled hidden>-- Odaberite svrhu --</option>';
+
+            // 🔥 Add event listener to update razlog dropdown
+            tipDokumenta.addEventListener("change", updateRazlogDropdown);
+        });
+
+        function confirmSubmission() {
+            const dokument = document.getElementById("tipDokumenta");
+            const razlog = document.getElementById("razlogZahtjeva");
+            const radioButtons = document.querySelectorAll('input[name="NacinPreuzimanja"]');
+            const selectedRadio = Array.from(radioButtons).find(r => r.checked);
+
+            if (!dokument.value || !razlog.value || !selectedRadio) {
+                let errors = [];
+                if (!dokument.value) errors.push("Niste odabrali tip dokumenta.");
+                if (!razlog.value) errors.push("Niste odabrali razlog zahtjeva.");
+                if (!selectedRadio) errors.push("Niste izabrali način preuzimanja.");
+
+                document.getElementById("errorModalBody").innerHTML = errors.join("<br>");
+                new bootstrap.Modal(document.getElementById('errorModal')).show();
+                return;
+            }
+
+            const dokumentText = dokument.options[dokument.selectedIndex].text;
+            const razlogText = razlog.options[razlog.selectedIndex].text;
+            const nacin = selectedRadio.nextElementSibling.innerText.trim();
+
+            const summaryText = `Želite poslati zahtjev za dokument: "${dokumentText}"<br>sa svrhom: "${razlogText}"<br>način preuzimanja: "${nacin}".`;
+            document.getElementById("modalBodyText").innerHTML = summaryText;
+            new bootstrap.Modal(document.getElementById('confirmationModal')).show();
+        }
+
+        function submitForm() {
+            window.location.href = '/Home/PrikaziHistorijuZahtjeva';
+        }
+    </script>
+
 }
