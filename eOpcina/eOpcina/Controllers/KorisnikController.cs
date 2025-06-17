@@ -89,6 +89,13 @@ namespace eOpcina.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Dodaj(Korisnik korisnik, string Password)
         {
+            // Ako neki od uslova nije zadovoljen, vrati View
+            if (!ProvjeriUslove(korisnik, Password))
+            {
+                Debug.WriteLine("[DEBUG] Provjera uslova nije prošla. Vraćam korisnika na formu za unos.");
+                return View(korisnik);
+            }
+
             if (ModelState.IsValid)
             {
                 // Postavi UserName na JMBG prije spremanja korisnika
@@ -248,6 +255,102 @@ namespace eOpcina.Controllers
                 .ToListAsync();
 
             return View("Pretrazi", users);
+        }
+
+
+        private bool ProvjeriUslove(Korisnik korisnik, string Password = "DefaultLozinka1")
+        {
+            // ModelState mora biti validan
+            if (!ModelState.IsValid)
+            {
+                return false;
+            }
+
+            // Email mora biti u ispravnom formatu
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(korisnik.Email);
+                if(addr.Address != korisnik.Email)
+                {
+                    ModelState.AddModelError("Email", "Email adresa nije u ispravnom formatu.");
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+            // Password mora biti između 6 i 30 znakova, mora imati barem jednu cifru, jedno veliko slovo i jedno malo slovo
+            if (Password.Length < 6 || Password.Length > 30 || 
+                !Password.Any(char.IsDigit) || !Password.Any(char.IsUpper) || !Password.Any(char.IsLower))
+            {
+                ModelState.AddModelError("Password", "Lozinka mora biti između 6 i 18 znakova, i mora sadržavati barem jednu cifru, jedno veliko slovo i jedno malo slovo.");
+                return false;
+            }
+
+            // JMBG mora biti 13 cifara
+            if (korisnik.JMBG.Length != 13 || !korisnik.JMBG.All(char.IsDigit))
+            {
+                ModelState.AddModelError("JMBG", "JMBG mora sadržavati tačno 13 cifara.");
+                return false;
+            }
+
+            // Datum rođenja koji se dobija iz JMBG mora biti validan i korisnik mora biti stariji od 18 godina
+            DateTime datumRodjenja;
+            try
+            {
+                int dan = int.Parse(korisnik.JMBG.Substring(0, 2));
+                int mjesec = int.Parse(korisnik.JMBG.Substring(2, 2));
+                int godina = int.Parse(korisnik.JMBG.Substring(4, 3)) + 1000; // JMBG koristi 3 cifre za godinu
+
+                // Provjeri da li su dan, mjesec i godina unutar validnih granica
+                if (godina < 1000 || godina > DateTime.Now.Year || mjesec < 1 || mjesec > 12 ||
+                    dan < 1 || dan > DateTime.DaysInMonth(godina, mjesec))
+                {
+                    ModelState.AddModelError("JMBG", "Neispravan JMBG");
+                    return false;
+                }
+
+                // Provjeri da li je korisnik stariji od 18 godina
+                datumRodjenja = new DateTime(godina, mjesec, dan);
+                if (DateTime.Now.Year - datumRodjenja.Year < 18 || 
+                   (DateTime.Now.Year - datumRodjenja.Year == 18 && 
+                   (DateTime.Now.Month < datumRodjenja.Month || 
+                   (DateTime.Now.Month == datumRodjenja.Month && DateTime.Now.Day < datumRodjenja.Day))))
+                {
+                    ModelState.AddModelError("JMBG", "Korisnik mora biti stariji od 18 godina.");
+                    return false;
+                }
+            }
+            catch
+            {
+                ModelState.AddModelError("JMBG", "Neispravan JMBG.");
+                return false;
+            }
+
+            // Elektronski potpis mora imati tačno 10 znakova
+            if (korisnik.ElektronskiPotpis.Length != 10)
+            {
+                ModelState.AddModelError("ElektronskiPotpis", "Elektronski potpis mora sadržavati najmanje 8 znakova.");
+                return false;
+            }
+            
+            // Broj lične karte mora biti tačno 9 znakova
+            if (korisnik.BrojLicneKarte.Length != 9)
+            {
+                ModelState.AddModelError("BrojLicneKarte", "Broj lične karte mora sadržavati tačno 9 znakova.");
+                return false;
+            }
+
+            // Rok trajanja lične karte mora biti u budućnosti
+            if (korisnik.RokTrajanjaLicneKarte <= DateTime.Now)
+            {
+                ModelState.AddModelError("RokTrajanjaLicneKarte", "Rok trajanja lične karte mora biti u budućnosti.");
+                return false;
+            }
+
+            return true;
         }
     }
 }
