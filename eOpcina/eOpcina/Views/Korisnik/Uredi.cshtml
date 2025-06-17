@@ -75,16 +75,17 @@
 
     <!-- DODATO polje za Zakljucan -->
     <div class="form-group form-check" style="margin-top: 15px;">
-        <input asp-for="Zakljucan" class="form-check-input" type="checkbox" id="Zakljucan" />
+        @Html.CheckBoxFor(model => model.Zakljucan, new { @class = "form-check-input", id = "Zakljucan" })
         <label class="form-check-label" for="Zakljucan">Zaključan (blokiran login)</label>
+
     </div>
+
+    <p><strong>Trenutno Zaključan:</strong> @Model.Zakljucan</p>
 
     <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Sačuvaj promjene</button>
     <a asp-action="Pretrazi" class="btn btn-secondary" style="margin-top: 40px;">Odustani</a>
 </form>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @await Html.PartialAsync("_ValidationScriptsPartial")
 }

@@ -17,11 +17,11 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<Korisnik>(options =>
 {
   
-    options.SignIn.RequireConfirmedAccount = true;
+    options.SignIn.RequireConfirmedAccount = false;
 
 
     //Ovo sam dodao 1.dan u 15:54 da bi se koristio Identity framework
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5); // koliko traje zakljucavanje
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromDays(365 * 100);// koliko traje zakljucavanje : beskonacno
     options.Lockout.MaxFailedAccessAttempts = 5; 
     options.Lockout.AllowedForNewUsers = true; // da li se primjenjuje i na nove korisnike
     //Ovo sam dodao 1.dan u 15:54 da bi se koristio Identity framework
