@@ -18,35 +18,27 @@
         }
         return enumValue.ToString();
     }
+
+    var selectedSort = ViewData["SortOrder"] as string ?? "";
+    var selectedFilter = ViewData["TipDokumentaFilter"]?.ToString();
 }
 
-<head>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-</head>
-
 <style>
-    .filter-button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        margin-left: 10px;
+    .filter-form {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
     }
 
-    .filter-row {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 10px;
-    }
+        .filter-form .form-check-inline {
+            margin-right: 15px;
+        }
 
-    .dropdown .dropdown-menu {
-        min-width: 200px;
+    .filter-label {
+        font-weight: bold;
+        margin-right: 10px;
     }
-
-    .dropdown-menu .dropdown-menu {
-        margin-left: 0.2rem;
-        margin-top: -0.5rem;
-    }
-
 
     .page-header {
         margin-top: 80px;
@@ -54,37 +46,66 @@
         text-align: center;
     }
 </style>
-    
+
 <h2 class="page-header">Historija Zahtjeva</h2>
 
 <div class="custom-table-container">
-    <div class="filter-row">
-        <div class="dropdown">
-            <button class="btn btn-light dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="/images/filter-icon.png" alt="Filter" style="height: 40px;" />
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-                <li><a class="dropdown-item active" href="#">Poredaj najranije</a></li>
-                <li><a class="dropdown-item" href="#">Poredaj najstarije</a></li>
-                <li>
-                    <div class="dropdown dropend">
-                        <a class="dropdown-item dropdown-toggle" href="#" id="tipDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Izaberi tip
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="tipDropdown">
-                            <li><a class="dropdown-item" href="#">Svi</a></li>
-                            <li><a class="dropdown-item" href="#">Rodni list</a></li>
-                            <li><a class="dropdown-item" href="#">Državljanstvo</a></li>
-                            <li><a class="dropdown-item" href="#">Vjenčani list</a></li>
-                            <li><a class="dropdown-item" href="#">Smrtni list</a></li>
-                            <li><a class="dropdown-item" href="#">Uvjerenje o prebivalištu</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+    <form method="get" asp-action="PrikaziHistorijuZahtjeva" class="filter-form">
+        <div class="row mb-3">
+            <div class="col-md-12 d-flex align-items-center flex-wrap">
+                <span class="filter-label">Sortiraj po:</span>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sortOrder" value="" id="sortDatumDesc"
+                    @(selectedSort == "" ? "checked" : "")>
+                    <label class="form-check-label" for="sortDatumDesc">Najnovije</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sortOrder" value="datum_asc" id="sortDatumAsc"
+                    @(selectedSort == "datum_asc" ? "checked" : "")>
+                    <label class="form-check-label" for="sortDatumAsc">Najstarije</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sortOrder" value="dokument" id="sortDokument"
+                    @(selectedSort == "dokument" ? "checked" : "")>
+                    <label class="form-check-label" for="sortDokument">Tip dokumenta</label>
+                </div>
+            </div>
         </div>
 
-    </div>
+        <div class="row mb-3">
+            <div class="col-md-12 d-flex align-items-center flex-wrap">
+                <span class="filter-label">Filtriraj po tipu:</span>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipDokumentaFilter" value=""
+                           id="filterAll" @(string.IsNullOrEmpty(selectedFilter) ? "checked" : "")>
+                    <label class="form-check-label" for="filterAll">Svi</label>
+                </div>
+
+                @foreach (TipDokumenta tip in Enum.GetValues(typeof(TipDokumenta)))
+                {
+                    var tipValue = ((int)tip).ToString();
+                    var uniqueId = $"filter_{tipValue}_{tip}";
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipDokumentaFilter" value="@tipValue"
+                               id="@uniqueId" @(selectedFilter == tipValue ? "checked" : "")>
+                        <label class="form-check-label" for="@uniqueId">@GetDisplayName(tip)</label>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Primijeni filtere</button>
+                <a class="btn btn-secondary" href="@Url.Action("PrikaziHistorijuZahtjeva", "Home")">Poništi</a>
+            </div>
+        </div>
+    </form>
 
     <table class="table table-striped custom-table">
         <thead>
@@ -92,18 +113,24 @@
                 <th>Datum</th>
                 <th>Dokument</th>
                 <th>Razlog zahtjeva</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 var tip = item.Dokument?.Sablon?.TipDokumenta;
+//                var nacin = item.PreuzimanjePutemPoste ? "Poštom" : "Lično";
+                var status = GetDisplayName(item.StanjeZahtjeva);
+
                 <tr style="font-weight:500">
                     <td>@item.DatumSlanja.ToString("dd.MM.yyyy HH:mm")</td>
                     <td>@(tip != null ? GetDisplayName(tip) : "N/A")</td>
                     <td>@GetDisplayName(item.RazlogZahtjeva)</td>
+                    <td>@status</td>
                 </tr>
             }
         </tbody>
     </table>
+
 </div>

@@ -18,6 +18,7 @@ namespace eOpcina.Models
         public int IdDokumenta { get; set; }
         [DisplayName("Razlog zahtjeva")]
         public Razlog RazlogZahtjeva { get; set; }
+        [DisplayName("Stanje zahtjeva")]
         public StanjeZahtjeva StanjeZahtjeva { get; set; }
         public Korisnik Korisnik { get; set; }
         public Dokument Dokument { get; set; }

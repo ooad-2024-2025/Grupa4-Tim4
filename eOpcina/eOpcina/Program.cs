@@ -12,13 +12,15 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
+builder.Services.AddHostedService<LicnaKartaExpiryChecker>();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Error";
+});
 
 builder.Services.AddDefaultIdentity<Korisnik>(options =>
-{
-  
+{  
     options.SignIn.RequireConfirmedAccount = false;
-
 
     //Ovo sam dodao 1.dan u 15:54 da bi se koristio Identity framework
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromDays(365 * 100);// koliko traje zakljucavanje : beskonacno
@@ -41,16 +43,19 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseExceptionHandler("/Error");
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
-app.UseAuthentication(); // Dodaj ovo jer koristiš Identity
+
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllerRoute(

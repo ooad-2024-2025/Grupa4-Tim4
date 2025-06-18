@@ -37,11 +37,28 @@ namespace eOpcina.Controllers
 
         // GET: Zahtjev
         [Authorize(Roles = "Zaposlenik,Administrator")]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string stanjeFilter)
         {
-            var applicationDbContext = _context.Zahtjev.Include(z => z.Dokument).Include(z => z.Korisnik);
-            return View(await applicationDbContext.ToListAsync());
+            var zahtjeviQuery = _context.Zahtjev
+                .Include(z => z.Dokument)
+                    .ThenInclude(d => d.Sablon)
+                .Include(z => z.Korisnik)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(stanjeFilter))
+            {
+                if (Enum.TryParse<StanjeZahtjeva>(stanjeFilter, out var parsedStanje))
+                {
+                    zahtjeviQuery = zahtjeviQuery.Where(z => z.StanjeZahtjeva == parsedStanje);
+                }
+            }
+
+            ViewData["StanjeFilter"] = stanjeFilter;
+
+            var zahtjevi = await zahtjeviQuery.ToListAsync();
+            return View(zahtjevi);
         }
+
 
         // GET: Zahtjev/Details/5
         [Authorize(Roles = "Zaposlenik,Administrator")]
@@ -65,7 +82,7 @@ namespace eOpcina.Controllers
         }
 
         // GET: Zahtjev/Create
-        //[Authorize(Roles = "Korisnik,Zaposlenik")]
+        [Authorize(Roles = "Korisnik,Zaposlenik")]
         public IActionResult Create()
         {
             ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
@@ -88,7 +105,7 @@ namespace eOpcina.Controllers
         }
 
         // POST: Zahtjev/Create
-        //[Authorize(Roles = "Korisnik,Zaposlenik")]
+        [Authorize(Roles = "Korisnik,Zaposlenik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ZahtjevCreateViewModel viewModel)
@@ -125,7 +142,7 @@ namespace eOpcina.Controllers
             var idKorisnika = _userManager.GetUserId(User);
             await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva, viewModel.NacinPreuzimanja);
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
         }
 
         // ZASAD SAM STAVIO DA NIKO NE MOŽE EDITOVATI ZAHTJEVE JER KONTAM NEMA POTREBE
@@ -187,6 +204,7 @@ namespace eOpcina.Controllers
         */
 
         // GET: Zahtjev/Delete/5
+        
         [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -361,8 +379,8 @@ namespace eOpcina.Controllers
                     pdfBytes: popunjeniPDF,
                     subject: "Dokument je spreman",
                     body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumentaNormalized} za zahtjev poslan " +
-                          $"{datumSlanja}.\nS poštovanjem,\neOpcina Team"
-                    );
+                          $"{datumSlanja.ToString("dd.MM.yyyy. HH:mm")}.\nS poštovanjem,\neOpcina Team"
+                );
             }
             else
             {

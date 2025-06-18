@@ -56,11 +56,19 @@
                 }
                 @tipDisplay
             </dd>
+
+            <dt class="col-sm-3" style="white-space: nowrap;">
+                @Html.DisplayNameFor(model => model.StanjeZahtjeva)
+            </dt>
+            <dd class="col-sm-9">
+                @GetDisplayName(Model.StanjeZahtjeva)
+            </dd>
+
         </dl>
     </div>
 
     <div>
-        <a style="margin-top:50px;" asp-action="Index">Back to List</a>
+        <a style="margin-top:50px;" asp-action="Index">Nazad na listu</a>
     </div>
 }
 

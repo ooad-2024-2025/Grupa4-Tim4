@@ -29,21 +29,37 @@
 {
     <h1 style="margin:30px; margin-bottom:50px;">Pregled poslanih zahtjeva</h1>
 
+    <form method="get" asp-action="Index" asp-controller="Zahtjev" class="mb-4">
+        <div class="d-flex justify-content-center mb-3">
+            <span class="me-3 fw-bold">Filtriraj po statusu:</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="stanjeFilter" value=""
+                @(ViewData["StanjeFilter"] == null ? "checked" : "") id="stanje_svi" />
+                <label class="form-check-label" for="stanje_svi">Svi</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="stanjeFilter" value="Obradjen"
+                @(ViewData["StanjeFilter"]?.ToString() == "Obradjen" ? "checked" : "") id="stanje_obradjeni" />
+                <label class="form-check-label" for="stanje_obradjeni">Obrađeni</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="stanjeFilter" value="Poslan"
+                @(ViewData["StanjeFilter"]?.ToString() == "Poslan" ? "checked" : "") id="stanje_neobradjeni" />
+                <label class="form-check-label" for="stanje_neobradjeni">Neobrađeni</label>
+            </div>
+            <button type="submit" class="btn btn-primary ms-3">Primijeni</button>
+        </div>
+    </form>
+
+
     <table class="table table-striped custom-table">
         <thead>
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.DatumSlanja)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RazlogZahtjeva)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Korisnik)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Dokument)
-                </th>
+                <th>@Html.DisplayNameFor(model => model.First().DatumSlanja)</th>
+                <th>@Html.DisplayNameFor(model => model.First().RazlogZahtjeva)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Korisnik)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Dokument)</th>
+                <th>Status</th>
                 <th></th>
             </tr>
         </thead>
@@ -53,18 +69,21 @@
                 var korisnikDisplay = $"{item.Korisnik.Ime} {item.Korisnik.Prezime} - JMBG: {item.Korisnik.JMBG}";
                 var tip = item.Dokument?.Sablon?.TipDokumenta;
                 var tipDisplay = tip != null ? GetDisplayName(tip) : "N/A";
+                //var nacin = item.PreuzimanjePutemPoste ? "Poštom" : "Lično";
+                var status = GetDisplayName(item.StanjeZahtjeva);
 
                 <tr>
                     <td>@item.DatumSlanja.ToString("dd.MM.yyyy HH:mm")</td>
                     <td>@GetDisplayName(item.RazlogZahtjeva)</td>
                     <td>@korisnikDisplay</td>
                     <td>@tipDisplay</td>
+                    <td>@status</td>
                     <td>
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalji</a>
                     </td>
                 </tr>
             }
         </tbody>
-
     </table>
+
 }

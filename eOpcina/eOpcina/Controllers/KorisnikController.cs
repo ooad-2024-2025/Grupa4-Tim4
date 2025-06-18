@@ -109,6 +109,15 @@ namespace eOpcina.Controllers
                 var result = await _userManager.CreateAsync(korisnik, Password);
                 if (result.Succeeded)
                 {
+                    var roleResult = await _userManager.AddToRoleAsync(korisnik, "Korisnik");
+                    if (!roleResult.Succeeded)
+                    {
+                        foreach (var error in roleResult.Errors)
+                            ModelState.AddModelError(string.Empty, $"Greška pri dodavanju u ulogu: {error.Description}");
+
+                        return View(korisnik);
+                    }
+
                     TempData["SuccessMessage"] = $"Uspješno je dodan Korisnik {korisnik.Ime} {korisnik.Prezime} sa JMBG {korisnik.JMBG}";
                     return RedirectToAction("Dodaj");
                 }
