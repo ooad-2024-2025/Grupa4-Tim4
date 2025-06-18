@@ -412,11 +412,6 @@ namespace eOpcina.Controllers
                         return BadRequest("Nepoznat tip dokumenta.");
                 }
 
-                // Fill the fields
-                fields["Ime"].SetValue(korisnik.Ime);
-                fields["Prezime"].SetValue(korisnik.Prezime);
-                fields["Datum"].SetValue(datumIzdavanja.ToShortDateString());
-
                 form.FlattenFields(); // Optional: makes the fields uneditable
 
                 pdfDoc.Close();
