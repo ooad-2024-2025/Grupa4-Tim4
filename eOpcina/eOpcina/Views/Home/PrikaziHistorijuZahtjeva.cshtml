@@ -114,6 +114,7 @@
                 <th>Dokument</th>
                 <th>Razlog zahtjeva</th>
                 <th>Status</th>
+                <th>Način preuzimanja</th>
             </tr>
         </thead>
         <tbody>
@@ -128,6 +129,7 @@
                     <td>@(tip != null ? GetDisplayName(tip) : "N/A")</td>
                     <td>@GetDisplayName(item.RazlogZahtjeva)</td>
                     <td>@status</td>
+                    <td>@GetDisplayName(item.NacinPreuzimanja)</td>
                 </tr>
             }
         </tbody>

@@ -60,6 +60,7 @@
                 <th>@Html.DisplayNameFor(model => model.First().Korisnik)</th>
                 <th>@Html.DisplayNameFor(model => model.First().Dokument)</th>
                 <th>Status</th>
+                <th>Način preuzimanja</th>
                 <th></th>
             </tr>
         </thead>
@@ -78,8 +79,10 @@
                     <td>@korisnikDisplay</td>
                     <td>@tipDisplay</td>
                     <td>@status</td>
+                    <td>@GetDisplayName(item.NacinPreuzimanja)</td>
                     <td>
                         <a asp-action="Details" asp-route-id="@item.Id">Detalji</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Uredi</a>
                     </td>
                 </tr>
             }

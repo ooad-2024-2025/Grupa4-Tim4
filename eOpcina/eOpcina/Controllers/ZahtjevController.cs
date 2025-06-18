@@ -145,66 +145,86 @@ namespace eOpcina.Controllers
             return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
         }
 
-        // ZASAD SAM STAVIO DA NIKO NE MOŽE EDITOVATI ZAHTJEVE JER KONTAM NEMA POTREBE
-        /*
+
         // GET: Zahtjev/Edit/5
+        [Authorize(Roles = "Zaposlenik")]
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
             var zahtjev = await _context.Zahtjev.FindAsync(id);
-            if (zahtjev == null)
-            {
-                return NotFound();
-            }
-            ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id", zahtjev.IdDokumenta);
-            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
+            if (zahtjev == null) return NotFound();
+
+            var allStates = Enum.GetValues(typeof(StanjeZahtjeva))
+                                .Cast<StanjeZahtjeva>();
+
+            var allowed = zahtjev.NacinPreuzimanja == NacinPreuzimanja.Licno
+                ? allStates.Where(s => s != StanjeZahtjeva.Obradjen)
+                : Enumerable.Empty<StanjeZahtjeva>();
+
+            ViewData["StanjeZahtjevaItems"] = new SelectList(
+                allowed.Select(s => new {
+                    Value = (int)s,
+                    Text = s.GetType()
+                            .GetMember(s.ToString())
+                            .First()
+                            .GetCustomAttributes(typeof(DisplayAttribute), false)
+                            .Cast<DisplayAttribute>()
+                            .First()
+                            .Name
+                }),
+                "Value", "Text",
+                (int)zahtjev.StanjeZahtjeva
+            );
+
             return View(zahtjev);
         }
 
         // POST: Zahtjev/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Zaposlenik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,DatumSlanja,IdKorisnika,IdDokumenta,RazlogZahtjeva")] Zahtjev zahtjev)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,StanjeZahtjeva,NacinPreuzimanja")] Zahtjev input)
         {
-            if (id != zahtjev.Id)
-            {
-                return NotFound();
-            }
+            if (id != input.Id) return NotFound();
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(zahtjev);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ZahtjevExists(zahtjev.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdDokumenta"] = new SelectList(_context.Dokument, "Id", "Id", zahtjev.IdDokumenta);
-            ViewData["IdKorisnika"] = new SelectList(_context.Korisnik, "Id", "Id", zahtjev.IdKorisnika);
-            return View(zahtjev);
+            var allStates = Enum.GetValues(typeof(StanjeZahtjeva))
+                                .Cast<StanjeZahtjeva>();
+            var allowed = input.NacinPreuzimanja == NacinPreuzimanja.Licno
+                ? allStates.Where(s => s != StanjeZahtjeva.Obradjen)
+                : Enumerable.Empty<StanjeZahtjeva>();
+
+            ViewData["StanjeZahtjevaItems"] = new SelectList(
+                allowed.Select(s => new {
+                    Value = (int)s,
+                    Text = s.GetType()
+                            .GetMember(s.ToString())
+                            .First()
+                            .GetCustomAttributes(typeof(DisplayAttribute), false)
+                            .Cast<DisplayAttribute>()
+                            .First()
+                            .Name
+                }),
+                "Value", "Text",
+                (int)input.StanjeZahtjeva
+            );
+
+            if (!ModelState.IsValid)
+                return View(input);
+
+            var existing = await _context.Zahtjev.FindAsync(id);
+            if (existing == null) return NotFound();
+
+            existing.StanjeZahtjeva = input.StanjeZahtjeva;
+            _context.Update(existing);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
-        */
+
 
         // GET: Zahtjev/Delete/5
-        
+
         [Authorize(Roles = "Zaposlenik,Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -298,7 +318,11 @@ namespace eOpcina.Controllers
             if (!Enum.IsDefined(typeof(TipDokumenta), tipDokumenta) || !Enum.IsDefined(typeof(Razlog), razlog))
                 return BadRequest("Nevažeći tip dokumenta ili razlog zahtjeva.");
 
-            if(idKorisnika == null)
+            if (nacinPreuzimanja == null)
+                // Jedna od dvije opcije mora biti odabrana
+                return BadRequest("Molimo odaberite način preuzimanja dokumenta.");
+
+            if (idKorisnika == null)
                 return BadRequest("Korisnik nije ulogovan.");
 
             var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
@@ -310,13 +334,13 @@ namespace eOpcina.Controllers
 
             var datumSlanja = DateTime.Now;
 
-            /*var sablon = await _context.Sablon
+            var sablon = await _context.Sablon
                 .FirstOrDefaultAsync(s => s.TipDokumenta == tipDokumenta);
             if (sablon == null)
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
-            byte[] sablonPDF = sablon.PDFSablona;*/
-            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\temp.pdf");
+            byte[] sablonPDF = sablon.PDFSablona;
+            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\ETF\CetvrtiSemestar\US\UputaZaIzvjestaj.pdf");
             var datumIzdavanja = DateTime.Now;
 
             /*
@@ -345,7 +369,7 @@ namespace eOpcina.Controllers
             {
                 DatumIzdavanja = DateTime.Now,
                 RokTrajanja = int.MaxValue,
-                IdSablona = 1,                      // HARDKODIRANO
+                IdSablona = sablon.Id,                      
                 PDFDokumenta = popunjeniPDF
             };
             _context.Dokument.Add(dokument);
@@ -356,7 +380,9 @@ namespace eOpcina.Controllers
                 IdKorisnika = idKorisnika.ToString(),
                 IdDokumenta = dokument.Id,
                 RazlogZahtjeva = razlog,
-                DatumSlanja = datumSlanja
+                DatumSlanja = datumSlanja,
+                NacinPreuzimanja = nacinPreuzimanja ?? NacinPreuzimanja.PrekoMaila,
+                StanjeZahtjeva = StanjeZahtjeva.Poslan
             };
             _context.Zahtjev.Add(zahtjev);
             await _context.SaveChangesAsync();
@@ -366,12 +392,8 @@ namespace eOpcina.Controllers
                         .First()
                         .GetCustomAttribute<DisplayAttribute>()?.Name ?? tipDokumenta.ToString();
 
-            if (nacinPreuzimanja == null)
-            {
-                // Jedna od dvije opcije mora biti odabrana
-                ModelState.AddModelError("NacinPreuzimanja", "Molimo odaberite način preuzimanja dokumenta.");
-            }
-            else if (nacinPreuzimanja == NacinPreuzimanja.PrekoMaila)
+            
+            if (nacinPreuzimanja == NacinPreuzimanja.PrekoMaila)
             {
                 // Korisnik će primiti dokument putem emaila
                 await PosaljiPDFEmail(
@@ -381,6 +403,10 @@ namespace eOpcina.Controllers
                     body: $"Poštovani,\nVaš zahtjev je obrađen. U prilogu se nalazi dokument: {tipDokumentaNormalized} za zahtjev poslan " +
                           $"{datumSlanja.ToString("dd.MM.yyyy. HH:mm")}.\nS poštovanjem,\neOpcina Team"
                 );
+                // Promijeni stanje zahtjeva na "Obrađen"
+                zahtjev.StanjeZahtjeva = StanjeZahtjeva.Obradjen;
+                _context.Zahtjev.Update(zahtjev);
+                await _context.SaveChangesAsync();
             }
             else
             {

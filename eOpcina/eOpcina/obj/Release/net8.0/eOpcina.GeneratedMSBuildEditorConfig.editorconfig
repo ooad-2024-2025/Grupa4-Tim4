@@ -17,131 +17,147 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = eOpcina
 build_property.RootNamespace = eOpcina
-build_property.ProjectDir = C:\ETF\CetvrtiSemestar\OOAD\GitHub\Grupa4-Tim4\eOpcina\eOpcina\
+build_property.ProjectDir = C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\ETF\CetvrtiSemestar\OOAD\GitHub\Grupa4-Tim4\eOpcina\eOpcina
+build_property.MSBuildProjectDirectory = C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/Index.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Error/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Error/GenericError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcR2VuZXJpY0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Error/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/PrikaziHistorijuZahtjeva.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Home/PrikaziHistorijuZahtjeva.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmlrYXppSGlzdG9yaWp1WmFodGpldmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/Privacy.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/Profil.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Home/Profil.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Home/Register.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Korisnik/Dodaj.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Korisnik/Dodaj.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcRG9kYWouY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Korisnik/Index.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Korisnik/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Korisnik/Pretrazi.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Korisnik/Pretrazi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcUHJldHJhemkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Korisnik/Uredi.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Korisnik/Uredi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcVXJlZGkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Sablon/Create.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Sablon/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FibG9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Sablon/Delete.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Sablon/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FibG9uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Sablon/Details.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Sablon/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FibG9uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Sablon/Edit.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Sablon/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FibG9uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Sablon/Index.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Sablon/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FibG9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Shared/Error.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Shared/_LoginPartial.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Zahtjev/Create.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Zahtjev/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Zahtjev/Delete.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Zahtjev/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Zahtjev/Details.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Zahtjev/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Zahtjev/Edit.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Zahtjev/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Zahtjev/Index.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Zahtjev/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWmFodGpldlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/_ViewImports.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/_ViewStart.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/CetvrtiSemestar/OOAD/GitHub/Grupa4-Tim4/eOpcina/eOpcina/Views/Shared/_Layout.cshtml]
+[C:/ETF/CetvrtiSemestar/OOAD/eOpcina/eOpcina/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fenir6zcuj

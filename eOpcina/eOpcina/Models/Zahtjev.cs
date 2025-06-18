@@ -22,6 +22,7 @@ namespace eOpcina.Models
         public StanjeZahtjeva StanjeZahtjeva { get; set; }
         public Korisnik Korisnik { get; set; }
         public Dokument Dokument { get; set; }
+        [DisplayName("Način preuzimanja")]
         public NacinPreuzimanja NacinPreuzimanja { get; set; }
         public Zahtjev() { }
     }
