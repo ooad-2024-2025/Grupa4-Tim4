@@ -22,7 +22,7 @@ namespace eOpcina.Models
         public StanjeZahtjeva StanjeZahtjeva { get; set; }
         public Korisnik Korisnik { get; set; }
         public Dokument Dokument { get; set; }
-
+        public NacinPreuzimanja NacinPreuzimanja { get; set; }
         public Zahtjev() { }
     }
 }

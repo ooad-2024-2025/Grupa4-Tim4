@@ -3,11 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eOpcina.ViewModels
 {
-    public enum NacinPreuzimanja
-    {
-        PrekoMaila,
-        UOpcini
-    }
+  
 
     public class ZahtjevCreateViewModel
     {

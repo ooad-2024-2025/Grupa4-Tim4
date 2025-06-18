@@ -1245,3 +1245,8 @@ C:\Harun\ETF\IV sem\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\refint\eOp
 C:\Harun\ETF\IV sem\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\eOpcina.pdb
 C:\Harun\ETF\IV sem\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\eOpcina.genruntimeconfig.cache
 C:\Harun\ETF\IV sem\OOAD\Grupa4-Tim4\eOpcina\eOpcina\obj\Debug\net8.0\ref\eOpcina.dll
+C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\Cips.pdf
+C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\Drzavljanstvo.pdf
+C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\RodniList.pdf
+C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\SmrtniList.pdf
+C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\UpisNovorodjenceta.pdf
