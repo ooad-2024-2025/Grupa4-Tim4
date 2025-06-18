@@ -284,8 +284,8 @@ namespace eOpcina.Controllers
         {
             return _context.Zahtjev.Any(e => e.Id == id);
         }
-        
-        
+
+
         private async Task<bool> ProvjeriUsloveAsync(string idKorisnika)
         {
             var korisnik = await _context.Korisnik.FindAsync(idKorisnika);
@@ -330,8 +330,8 @@ namespace eOpcina.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> 
-            ObradiZahtjev(string idKorisnika, TipDokumenta tipDokumenta, Razlog razlog, NacinPreuzimanja? nacinPreuzimanja)
+        public async Task<IActionResult>
+    ObradiZahtjev(string idKorisnika, TipDokumenta tipDokumenta, Razlog razlog, NacinPreuzimanja? nacinPreuzimanja)
         {
             if (!Enum.IsDefined(typeof(TipDokumenta), tipDokumenta) || !Enum.IsDefined(typeof(Razlog), razlog))
                 return BadRequest("Nevažeći tip dokumenta ili razlog zahtjeva.");
@@ -358,10 +358,9 @@ namespace eOpcina.Controllers
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
             byte[] sablonPDF = sablon.PDFSablona;
-            byte[] popunjeniPDF = System.IO.File.ReadAllBytes(@"C:\ETF\CetvrtiSemestar\US\UputaZaIzvjestaj.pdf");
+            byte[] popunjeniPDF = sablonPDF;
             var datumIzdavanja = DateTime.Now;
 
-            /*
             using (var templateStream = new MemoryStream(sablonPDF))
             using (var outputStream = new MemoryStream())
             {
@@ -370,6 +369,48 @@ namespace eOpcina.Controllers
                 var pdfDoc = new PdfDocument(pdfReader, pdfWriter);
                 var form = PdfAcroForm.GetAcroForm(pdfDoc, true);
                 var fields = form.GetFormFields();
+
+                switch (tipDokumenta) // Popunjavanje polja ovisno o tipu dokumenta
+                {
+                    case TipDokumenta.Cips:
+                        fields["Ime"].SetValue(korisnik.Ime);
+                        fields["Prezime"].SetValue(korisnik.Prezime);
+                        fields["JMBG"].SetValue(korisnik.JMBG);
+                        fields["AdresaPrebivalista"].SetValue(korisnik.AdresaPrebivalista);
+                        break;
+                    case TipDokumenta.Drzavljanstvo:
+                        fields["Ime"].SetValue(korisnik.Ime);
+                        fields["Prezime"].SetValue(korisnik.Prezime);
+                        fields["JMBG"].SetValue(korisnik.JMBG);
+                        fields["Datum"].SetValue(datumIzdavanja.ToShortDateString());
+                        break;
+                    case TipDokumenta.RodniList:
+                        fields["Ime"].SetValue(korisnik.Ime);
+                        fields["Prezime"].SetValue(korisnik.Prezime);
+                        fields["Spol"].SetValue(GetEnumDisplayName(korisnik.Spol));
+                        fields["Dan"].SetValue(korisnik.JMBG.Substring(0, 2));
+                        fields["Mjesec"].SetValue(korisnik.JMBG.Substring(2, 2));
+                        // Fetch the 3 digits of the year from the JMBG, and add 1000 if the year is greater than 900, and 2000 otherwise
+                        int year = int.Parse(korisnik.JMBG.Substring(4, 3));
+                        year = year > 900 ? year + 1000 : year + 2000;
+                        fields["Godina"].SetValue(year.ToString());
+                        break;
+                    case TipDokumenta.SmrtniList:
+                        fields["Ime"].SetValue(korisnik.Ime);
+                        fields["Prezime"].SetValue(korisnik.Prezime);
+                        fields["JMBG"].SetValue(korisnik.JMBG);
+                        fields["AdresaPrebivalista"].SetValue(korisnik.AdresaPrebivalista);
+                        break;
+                    case TipDokumenta.UpisNovorodjenceta:
+                        fields["Ime"].SetValue(korisnik.Ime);
+                        fields["Prezime"].SetValue(korisnik.Prezime);
+                        fields["JMBG"].SetValue(korisnik.JMBG);
+                        fields["AdresaPrebivalista"].SetValue(korisnik.AdresaPrebivalista);
+                        break;
+
+                    default:
+                        return BadRequest("Nepoznat tip dokumenta.");
+                }
 
                 // Fill the fields
                 fields["Ime"].SetValue(korisnik.Ime);
@@ -381,13 +422,12 @@ namespace eOpcina.Controllers
                 pdfDoc.Close();
                 popunjeniPDF = outputStream.ToArray();
             }
-            */
 
             var dokument = new Dokument
             {
                 DatumIzdavanja = DateTime.Now,
                 RokTrajanja = int.MaxValue,
-                IdSablona = sablon.Id,                      
+                IdSablona = sablon.Id,
                 PDFDokumenta = popunjeniPDF
             };
             _context.Dokument.Add(dokument);
@@ -410,7 +450,7 @@ namespace eOpcina.Controllers
                         .First()
                         .GetCustomAttribute<DisplayAttribute>()?.Name ?? tipDokumenta.ToString();
 
-            
+
             if (nacinPreuzimanja == NacinPreuzimanja.PrekoMaila)
             {
                 // Korisnik će primiti dokument putem emaila
@@ -433,6 +473,13 @@ namespace eOpcina.Controllers
             }
 
             return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
+        }
+
+        private string GetEnumDisplayName(Enum enumValue)
+        {
+            var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
+            var displayAttr = member?.GetCustomAttribute<DisplayAttribute>();
+            return displayAttr?.GetName() ?? enumValue.ToString();
         }
     }
 }

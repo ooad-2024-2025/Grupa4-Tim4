@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eOpcina.ViewModels
 {
-  
+
 
     public class ZahtjevCreateViewModel
     {
