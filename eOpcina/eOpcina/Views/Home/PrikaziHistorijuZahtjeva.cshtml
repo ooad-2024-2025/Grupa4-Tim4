@@ -23,6 +23,13 @@
     var selectedFilter = ViewData["TipDokumentaFilter"]?.ToString();
 }
 
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Success"]
+    </div>
+}
+
 <style>
     .filter-form {
         margin-bottom: 20px;

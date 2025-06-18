@@ -120,6 +120,9 @@ namespace eOpcina.Controllers
                 ModelState.AddModelError("RazlogZahtjeva", "Nevažeći razlog zahtjeva");
             }
 
+            if (viewModel.NacinPreuzimanja == null)
+                ModelState.AddModelError("NacinPreuzimanja", "Molimo odaberite način preuzimanja dokumenta.");
+
             if (!ModelState.IsValid)
             {
                 ViewBag.TipoviDokumenata = Enum.GetValues(typeof(TipDokumenta))
@@ -140,9 +143,9 @@ namespace eOpcina.Controllers
                 return View(viewModel);
             }
             var idKorisnika = _userManager.GetUserId(User);
-            await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva, viewModel.NacinPreuzimanja);
+            return await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva, viewModel.NacinPreuzimanja);
 
-            return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
+            //return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
         }
 
 
@@ -155,12 +158,15 @@ namespace eOpcina.Controllers
             var zahtjev = await _context.Zahtjev.FindAsync(id);
             if (zahtjev == null) return NotFound();
 
-            var allStates = Enum.GetValues(typeof(StanjeZahtjeva))
-                                .Cast<StanjeZahtjeva>();
+            if (zahtjev.NacinPreuzimanja != NacinPreuzimanja.Licno)
+            {
+                // You could optionally redirect or show error if editing isn't allowed
+                TempData["Error"] = "Samo zahtjevi za lično preuzimanje se mogu uređivati.";
+                return RedirectToAction(nameof(Index));
+            }
 
-            var allowed = zahtjev.NacinPreuzimanja == NacinPreuzimanja.Licno
-                ? allStates.Where(s => s != StanjeZahtjeva.Obradjen)
-                : Enumerable.Empty<StanjeZahtjeva>();
+            var allStates = Enum.GetValues(typeof(StanjeZahtjeva)).Cast<StanjeZahtjeva>();
+            var allowed = allStates.Where(s => s != StanjeZahtjeva.Obradjen);
 
             ViewData["StanjeZahtjevaItems"] = new SelectList(
                 allowed.Select(s => new {
@@ -168,10 +174,7 @@ namespace eOpcina.Controllers
                     Text = s.GetType()
                             .GetMember(s.ToString())
                             .First()
-                            .GetCustomAttributes(typeof(DisplayAttribute), false)
-                            .Cast<DisplayAttribute>()
-                            .First()
-                            .Name
+                            .GetCustomAttribute<DisplayAttribute>()?.Name ?? s.ToString()
                 }),
                 "Value", "Text",
                 (int)zahtjev.StanjeZahtjeva
@@ -184,13 +187,19 @@ namespace eOpcina.Controllers
         [Authorize(Roles = "Zaposlenik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,StanjeZahtjeva,NacinPreuzimanja")] Zahtjev input)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,StanjeZahtjeva")] Zahtjev input)
         {
+            ModelState.Remove(nameof(input.IdKorisnika));
+            ModelState.Remove("Korisnik");
+            ModelState.Remove("Dokument");
+
             if (id != input.Id) return NotFound();
 
-            var allStates = Enum.GetValues(typeof(StanjeZahtjeva))
-                                .Cast<StanjeZahtjeva>();
-            var allowed = input.NacinPreuzimanja == NacinPreuzimanja.Licno
+            var existing = await _context.Zahtjev.FindAsync(id);
+            if (existing == null) return NotFound();
+
+            var allStates = Enum.GetValues(typeof(StanjeZahtjeva)).Cast<StanjeZahtjeva>();
+            var allowed = existing.NacinPreuzimanja == NacinPreuzimanja.Licno
                 ? allStates.Where(s => s != StanjeZahtjeva.Obradjen)
                 : Enumerable.Empty<StanjeZahtjeva>();
 
@@ -200,20 +209,20 @@ namespace eOpcina.Controllers
                     Text = s.GetType()
                             .GetMember(s.ToString())
                             .First()
-                            .GetCustomAttributes(typeof(DisplayAttribute), false)
-                            .Cast<DisplayAttribute>()
-                            .First()
-                            .Name
+                            .GetCustomAttribute<DisplayAttribute>()?.Name ?? s.ToString()
                 }),
                 "Value", "Text",
                 (int)input.StanjeZahtjeva
             );
 
             if (!ModelState.IsValid)
-                return View(input);
+                return View(existing);
 
-            var existing = await _context.Zahtjev.FindAsync(id);
-            if (existing == null) return NotFound();
+            if (!allowed.Contains(input.StanjeZahtjeva))
+            {
+                ModelState.AddModelError("StanjeZahtjeva", "Odabrano stanje nije dozvoljeno za ovaj zahtjev.");
+                return View(existing);
+            }
 
             existing.StanjeZahtjeva = input.StanjeZahtjeva;
             _context.Update(existing);
@@ -411,10 +420,10 @@ namespace eOpcina.Controllers
             else
             {
                 // Korisnik će preuzeti dokument u općini
-                ViewBag.Message = $"Dokument {tipDokumentaNormalized} je spreman za preuzimanje u općini. Molimo posjetite lokalnu općinu da preuzmete dokument.";
+                TempData["Success"] = "Vaš zahtjev je spremljen i dokument će biti dostupan za preuzimanje u općini.";
             }
 
-            return View();
+            return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
         }
     }
 }

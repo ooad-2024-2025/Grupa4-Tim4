@@ -2,39 +2,31 @@
 @using eOpcina.Models
 @using System.ComponentModel.DataAnnotations
 @using System.Reflection
+
 @{
     ViewData["Title"] = "Edit Zahtjev";
 
     string GetDisplayName(Enum enumValue)
     {
         var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
-        if (member != null)
-        {
-            var displayAttr = member.GetCustomAttribute<DisplayAttribute>();
-            if (displayAttr != null)
-            {
-                return displayAttr.GetName();
-            }
-        }
-        return enumValue.ToString();
+        var displayAttr = member?.GetCustomAttribute<DisplayAttribute>();
+        return displayAttr?.Name ?? enumValue.ToString();
     }
 }
 
-
-
-@if ( User.IsInRole("Zaposlenik") )
+@if (User.IsInRole("Zaposlenik"))
 {
     <h1>Edit Zahtjev</h1>
 
-    <form asp-action="Edit" method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="All" class="text-danger"></div>
 
         <input type="hidden" asp-for="Id" />
-        <input type="hidden" asp-for="NacinPreuzimanja" />
 
         <div class="form-group">
             <label>Način preuzimanja:</label>
-            <p class="form-control-static">@GetDisplayName(@Model.NacinPreuzimanja)</p>
+            <p class="form-control-static">@GetDisplayName(Model.NacinPreuzimanja)</p>
         </div>
 
         @if (Model.NacinPreuzimanja == NacinPreuzimanja.Licno)
@@ -53,7 +45,7 @@
         {
             <div class="form-group">
                 <label>Stanje zahtjeva:</label>
-                <p class="form-control-static">@Model.StanjeZahtjeva</p>
+                <p class="form-control-static">@GetDisplayName(Model.StanjeZahtjeva)</p>
             </div>
         }
 
@@ -62,8 +54,6 @@
     </form>
 
     @section Scripts {
-        @{
-            await Html.RenderPartialAsync("_ValidationScriptsPartial");
-        }
+    @await Html.PartialAsync("_ValidationScriptsPartial")
     }
 }
