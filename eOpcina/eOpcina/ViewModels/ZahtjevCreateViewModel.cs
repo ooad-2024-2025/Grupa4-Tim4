@@ -17,5 +17,9 @@ namespace eOpcina.ViewModels
 
         [Required]
         public NacinPreuzimanja? NacinPreuzimanja { get; set; }
+
+        [Required(ErrorMessage = "Elektronski potpis je obavezan.")]
+        [Display(Name = "Elektronski potpis")]
+        public string ElektronskiPotpis { get; set; }
     }
 }

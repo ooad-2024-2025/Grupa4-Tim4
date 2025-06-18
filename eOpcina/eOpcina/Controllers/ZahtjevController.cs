@@ -105,23 +105,31 @@ namespace eOpcina.Controllers
         }
 
         // POST: Zahtjev/Create
-        [Authorize(Roles = "Korisnik,Zaposlenik")]
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Korisnik,Zaposlenik")]
         public async Task<IActionResult> Create(ZahtjevCreateViewModel viewModel)
         {
             if (!Enum.IsDefined(typeof(TipDokumenta), viewModel.TipDokumenta))
-            {
                 ModelState.AddModelError("TipDokumenta", "Nevažeći tip dokumenta.");
-            }
 
             if (!Enum.IsDefined(typeof(Razlog), viewModel.RazlogZahtjeva))
-            {
-                ModelState.AddModelError("RazlogZahtjeva", "Nevažeći razlog zahtjeva");
-            }
+                ModelState.AddModelError("RazlogZahtjeva", "Nevažeći razlog zahtjeva.");
 
             if (viewModel.NacinPreuzimanja == null)
                 ModelState.AddModelError("NacinPreuzimanja", "Molimo odaberite način preuzimanja dokumenta.");
+
+            if (string.IsNullOrWhiteSpace(viewModel.ElektronskiPotpis))
+                ModelState.AddModelError("ElektronskiPotpis", "Elektronski potpis je obavezan.");
+            else
+            {
+                var userId = _userManager.GetUserId(User);
+                var user = await _context.Korisnik.FindAsync(userId);
+                if (user == null || user.ElektronskiPotpis != viewModel.ElektronskiPotpis)
+                {
+                    ModelState.AddModelError("ElektronskiPotpis", "Pogrešan elektronski potpis. Pokušajte ponovo.");
+                }
+            }
 
             if (!ModelState.IsValid)
             {
@@ -132,6 +140,7 @@ namespace eOpcina.Controllers
                         Value = ((int)t).ToString(),
                         Text = t.ToString()
                     });
+
                 ViewBag.RazloziZahtjeva = Enum.GetValues(typeof(Razlog))
                     .Cast<Razlog>()
                     .Select(r => new SelectListItem
@@ -142,11 +151,11 @@ namespace eOpcina.Controllers
 
                 return View(viewModel);
             }
+
             var idKorisnika = _userManager.GetUserId(User);
             return await ObradiZahtjev(idKorisnika, viewModel.TipDokumenta, viewModel.RazlogZahtjeva, viewModel.NacinPreuzimanja);
-
-            //return RedirectToAction("PrikaziHistorijuZahtjeva", "Home");
         }
+
 
 
         // GET: Zahtjev/Edit/5
