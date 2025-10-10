@@ -358,7 +358,9 @@ namespace eOpcina.Controllers
                 return NotFound("Šablon za traženi tip dokumenta nije pronađen.");
 
             byte[] sablonPDF = sablon.PDFSablona;
-            byte[] popunjeniPDF = sablonPDF;
+            byte[] popunjeniPDF;
+            
+
             var datumIzdavanja = DateTime.Now;
 
             using (var templateStream = new MemoryStream(sablonPDF))

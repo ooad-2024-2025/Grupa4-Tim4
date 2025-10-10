@@ -1250,3 +1250,8 @@ C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot
 C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\RodniList.pdf
 C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\SmrtniList.pdf
 C:\Users\hsadi\Desktop\OOAD\Grupa4-Tim4\eOpcina\eOpcina\bin\Debug\net8.0\wwwroot\templates\UpisNovorodjenceta.pdf
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\Controllers\Cips.pdf
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\Controllers\Drzavljanstvo.pdf
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\Controllers\RodniList.pdf
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\Controllers\SmrtniList.pdf
+C:\ETF\CetvrtiSemestar\OOAD\eOpcina\eOpcina\bin\Debug\net8.0\Controllers\UpisNovorodjenceta.pdf
