@@ -6,7 +6,7 @@
 
 **Link aplikacije:**  
 [eopcina.com](http://haris23-001-site1.qtempurl.com/)
-Username: 11250173
+Username: 11269015
 Password: 60-dayfreetrial
 
 **Konekcioni string za bazu:**  
