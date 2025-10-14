@@ -11,7 +11,7 @@ Password: 60-dayfreetrial
 
 **Konekcioni string za bazu:**  
 ```ini
-"Data Source=SQL1004.site4now.net;Initial Catalog=db_aba9fd_ooad2024;User Id=db_aba9fd_ooad2024_admin;Password=druga_godina3"
+"Data Source=SQL6031.site4now.net;Initial Catalog=db_abf397_easy115;User Id=db_abf397_easy115_admin;Password=druga_godina2"
 ```
 
 **Pristupni podaci za korisnike:**
