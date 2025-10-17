@@ -5,7 +5,7 @@
 ### Pristupni podaci
 
 **Link aplikacije:**  
-[eopcina.com](http://haris23-001-site1.qtempurl.com/)
+[eopcina.com](http://easy115-001-site1.mtempurl.com/)
 Username: 11269015
 Password: 60-dayfreetrial
 
