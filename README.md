@@ -5,7 +5,7 @@
 ### Pristupni podaci
 
 **Link aplikacije:**  
-[eopcina.com](sadikoyic2-001-site1.mtempurl.com)
+[eopcina.com](http://sadikoyic2-001-site1.mtempurl.com)
 Username: 11292913
 Password: 60-dayfreetrial
 
