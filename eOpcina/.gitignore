@@ -1,0 +1,20 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
+
+# Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Database related
+*.db
+*.mdf
+*.ldf
+
+# User-specific files
+appsettings.Development.json

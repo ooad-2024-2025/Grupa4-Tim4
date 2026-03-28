@@ -1,0 +1,49 @@
+﻿@model List<eOpcina.Models.Korisnik>
+
+@{
+    ViewData["Title"] = "Pretraga korisnika";
+}
+
+<h2>Pretraži korisnika za uređivanje</h2>
+
+<form method="post" asp-action="Pretrazi" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="query" class="form-control" placeholder="Unesite ime i prezime..." required />
+        <button type="submit" class="btn btn-primary">Pretraži</button>
+    </div>
+</form>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>JMBG</th>
+                <th>Broj lične karte</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var korisnik in Model)
+            {
+                <tr>
+                    <td>@korisnik.Ime</td>
+                    <td>@korisnik.Prezime</td>
+                    <td>@korisnik.JMBG</td>
+                    <td>@korisnik.BrojLicneKarte</td>
+                    <td>
+                        <a asp-action="Uredi" asp-route-id="@korisnik.Id" class="btn btn-sm btn-outline-primary">
+                            Uredi
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Model != null)
+{
+    <div class="alert alert-warning">Nema rezultata za dati upit.</div>
+}

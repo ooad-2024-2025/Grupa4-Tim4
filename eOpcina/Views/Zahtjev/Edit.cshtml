@@ -1,0 +1,59 @@
+﻿@model eOpcina.Models.Zahtjev
+@using eOpcina.Models
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
+
+@{
+    ViewData["Title"] = "Edit Zahtjev";
+
+    string GetDisplayName(Enum enumValue)
+    {
+        var member = enumValue.GetType().GetMember(enumValue.ToString()).FirstOrDefault();
+        var displayAttr = member?.GetCustomAttribute<DisplayAttribute>();
+        return displayAttr?.Name ?? enumValue.ToString();
+    }
+}
+
+@if (User.IsInRole("Zaposlenik"))
+{
+    <h1>Edit Zahtjev</h1>
+
+    <form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label>Način preuzimanja:</label>
+            <p class="form-control-static">@GetDisplayName(Model.NacinPreuzimanja)</p>
+        </div>
+
+        @if (Model.NacinPreuzimanja == NacinPreuzimanja.Licno)
+        {
+            <div class="form-group">
+                <label asp-for="StanjeZahtjeva" class="control-label"></label>
+                <select asp-for="StanjeZahtjeva"
+                        class="form-control"
+                        asp-items="ViewBag.StanjeZahtjevaItems">
+                    <option value="">-- odaberite --</option>
+                </select>
+                <span asp-validation-for="StanjeZahtjeva" class="text-danger"></span>
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                <label>Stanje zahtjeva:</label>
+                <p class="form-control-static">@GetDisplayName(Model.StanjeZahtjeva)</p>
+            </div>
+        }
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </form>
+
+    @section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
+}

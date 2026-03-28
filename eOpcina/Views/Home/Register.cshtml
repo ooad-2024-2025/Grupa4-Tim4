@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Register info";
+}
+<head>
+    <style>
+        h1.display-4 {
+            font-weight: bold;
+        }
+
+        img.shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Title -->
+    <div class="container text-center my-5">
+        <h1 class="display-4">Kako se registrovati na eOpćina?</h1>
+        <br /> <br />
+    </div>
+
+    <!-- Main Content: Text + Image -->
+    <div class="container mb-5">
+        <div class="row align-items-center">
+            <!-- Left: Explanation Text -->
+            <div class="col-md-6">
+                <p class="fs-4">
+                    Registracija na servis eOpćina zahtijeva da fizičko lice (podnosilac) podnese zahtjev za izdavanje korisničkog računa na eOpćini u općinskom uredu u koji je prijavljen.
+                    <br /> <br />
+                    Tom prilikom je dužan podnijeti identifikacioni dokument (lična karta/pasoš) te svoju kvalifikovanu digitalnu potvrdu (elektronski potpis). Za one koji to nemaju upućuju se na stranicu <a href="https://www.iddeea.gov.ba/bs/izdavanje-certifikata/">IDDEEA</a> koja govori o proceduri izdavanja istog.
+                    <br /> <br />
+                    Podnosilac u općinskom uredu preuzima i ispunjava Zahtjev za izdavanje korisničkog računa na eOpćini, te zajedno sa identifikacionim dokumentom predaje navedeno ovlaštenom službeniku. Službenik putem servisa unosi podatke i registruje novog korisnika (podnosioca). Na kraju službenik uručuje podnosiocu zahtjeva pristupne podatke za račun, nakon čega podnosioc zahtjeva može pristupiti online servisu eOpćina i koristiti njene usluge.
+                </p>
+            </div>
+
+            <!-- Right: Slideshow -->
+            <div class="slideshow-container text-center" style="padding:0px">
+                <div class="slideshow" id="slideshow">
+                    <img src="~/images/opcina.jpg" alt="Slika 1">
+                    <img src="~/images/opcina1.jpg" alt="Slika 2">
+                    <img src="~/images/opcina2.jpg" alt="Slika 3">
+                    <img src="~/images/opcina3.jpg" alt="Slika 4">
+                    <img src="~/images/opcina.jpg" alt="Slika 1 again (duplicate)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spacer + Partnership Section -->
+    <div class="container text-center my-5">
+        <br /> <br />
+        <h5 class="mb-3 text-muted">U saradnji sa IDDEEA</h5>
+        <p><a target="_blank" href="https://www.iddeea.gov.ba/bs/pocetna-bs/" ><img src="~/images/iddeea-logo.png" style="width: 200px; height: auto;" alt="IDDEEA Logo"></a></p>
+    </div>
+
+    @section Scripts {
+        <script>
+            const slideshow = document.getElementById('slideshow');
+            const slideWidth = 600;
+            const numSlides = 4; // not counting the duplicated one
+            let index = 0;
+
+            setInterval(() => {
+                index++;
+                slideshow.style.transition = 'transform 1s ease-in-out';
+                slideshow.style.transform = `translateX(-${index * slideWidth}px)`;
+
+                if (index === numSlides) {
+                    setTimeout(() => {
+                        slideshow.style.transition = 'none';
+                        slideshow.style.transform = 'translateX(0)';
+                        index = 0;
+                    }, 1000); // match transition time
+                }
+            }, 4000);
+        </script>
+    }
+
+
+</body>
